@@ -1,0 +1,63 @@
+/* Whole Body Design*/
+html, body{
+	height: 100%;
+}
+
+#Container{
+	height:100%;
+	width: 100%;
+	overflow: hidden;
+	background-color: #142E34;
+}
+
+/* Navigation Menu left*/
+#Navigation{
+	height: 100%;
+	width: 20%;
+	background-color: #050B0D;
+	padding-top: 10%;
+	float: left;
+}
+
+#jumbotronNav{
+	height: 25%;
+	max-width: 95%; 
+	margin: 1% auto 0% auto;
+	padding: 15%;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	border-radius: 3%;
+}
+
+
+.active{
+	background-color: #00D778;
+}
+
+/*Navigation Menu Top*/
+.navColor{
+	background-color: #142E34;
+}
+
+#jumbotronNav > a{
+	color: #FFF;
+	text-decoration: none;
+}
+
+.nav-item > a{
+	color: #FFF;
+	text-decoration: none;
+}
+
+
+/*Panel for tabs */
+.tab-content > .tab-pane{
+	background-color: #FFF;
+}
+
+
+/*Div for panel*/
+.FormArea{
+	height: 100vh;
+}
