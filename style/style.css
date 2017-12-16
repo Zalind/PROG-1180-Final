@@ -60,4 +60,5 @@ html, body{
 /*Div for panel*/
 .FormArea{
 	height: 100vh;
+	overflow: scroll;
 }
