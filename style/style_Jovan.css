@@ -1,3 +1,9 @@
 .Container{
 	padding-left: 10px;
+	padding-bottom: 70px;
 }
+
+.Label{
+	font-weight: 700;
+}
+
