@@ -1,0 +1,1147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Designer</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/designStyle.css">
+  </head>
+
+
+  <body>
+  	<!-- Body for the website -->
+  	<div id="Container">
+  		<!--Navigation Menu(On left of screen)-->
+
+		   <div id="Navigation">
+				<ul class="list-unstyled">
+					<li id="jumbotronNav"><a href="#">Admin</a></li>
+
+					<li id="jumbotronNav" class="active"><a href="designPage.html">Designer</a></li>
+
+					<li id="jumbotronNav"><a href="#">Production Manager</a></li>
+
+					<li id="jumbotronNav"><a href="#">Design Worker</a></li>
+
+					<li id="jumbotronNav"><a href="#">Production Worker</a></li>
+				</ul>
+	    	</div>
+
+	    	<!--Tab Navigation Menu-->
+	    <div class="navColor ">
+	    	<ul class="nav nav-tabs">
+			  <li class="nav-item">
+			    <a href="#DHP" class="nav-link active" role="tab" data-toggle="tab">Home</a>
+			  </li>
+			  <li class="nav-item">
+			    <a href="#CDB" class="nav-link" role="tab" data-toggle="tab">Create Design Bid</a>
+			  </li>
+			  <li class="nav-item">
+			    <a  href="#VDB" class="nav-link" role="tab" data-toggle="tab">View Design Bid</a>
+			  </li>
+			  <li class="nav-item">
+			    <a  href="#CDBU" class="nav-link" role="tab" data-toggle="tab">Create Design Budget</a>
+			  </li>
+			  <li class="nav-item">
+			    <a  href="#VDBU" class="nav-link" role="tab" data-toggle="tab">View Design Budget</a>
+			  </li>
+			</ul>
+
+			<!--Tab Content Menu-->
+			<div class="tab-content fixed-right" id="myTabContent">
+				<!-- Tab Pane Menus-->
+					<div class="tab-pane active" id="DHP" role="tabpanel">
+						<div class="FormArea">
+							<h1>Welcome Designer</h1>
+							<h4>Last Login: 1 day(s) ago</h4>
+
+							<form>
+								<fieldset>
+									<legend>Messages</legend>
+
+									<div class="row">
+										<div class="col-lg-12">
+											<button type="button" id="remBut1" onclick="hideMsg(1)" class="addButton">X</button>
+											<output name="msg1" id="msg1" class="msg">Daily Work Report has not been Completed</output>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-lg-12">
+											<button type="button" id="remBut2" onclick="hideMsg(2)" class="addButton">X</button>
+											<output name="msg" id="msg2" class="msg">2 new Clients have been added</output>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-lg-12">
+											<button type="button" id="remBut3" onclick="hideMsg(3)" class="addButton">X</button>
+											<output name="msg" id="msg3" class="msg">The Budget for London Sq. Mall was Approved</output>
+										</div>
+									</div>
+								</fieldset>
+							</form>
+						</div>	
+					</div>
+		  			<div class="tab-pane" id="CDB" role="tabpanel">
+			  				<div class="FormArea">
+			  					<h1>Create new Design Bid</h1>
+
+			  					<div class="Container">
+			  						<form>
+				  							<fieldset>
+				  								<legend>Client Information</legend>
+				  									<div class ="row">
+				  										<div class ="col-lg-4">
+
+						  									<label for="cliNam">Client Name:</label><br>
+						  									<select name="cliNam">
+						  										<option value="" selected disabled hidden>Choose Client</option>
+						  										<option value="cli1">Client 1</option>
+						  										<option value="cli2">Client 2</option>
+						  										<option value="cli3">Client 3</option>
+						  										<option value="cli4">Client 4</option>
+						  										<option value="cli5">Client 5</option>
+				  									</select>
+				  								</div>
+
+				  								<div class="col-lg-4">
+				  									<label for="conNam">Contact Name:</label><br>
+				  									<input type="text" name="conNam" placeholder="Enter Contact Name">
+				  								</div>
+				  							</div>
+
+				  							<div class ="row">
+				  								<div class="col-lg-4">
+				  									<label for="cliAddr">Client Address:</label><br>
+				  									<input type="text" name="cliAddr" placeholder="Enter Address">
+				  								</div>
+
+				  								<div class="col-lg-5">
+				  									<label for="cliPho">Client Phone Number:</label><br>
+				  									<input type="tel" name="cliPho" placeholder="xxx-xxx-xxxx">
+				  								</div>
+				  							</div>
+				  						</fieldset>
+
+				  						<fieldset>
+				  							<legend>NBD Staff</legend>
+				  							<div class="row">
+				  								<div class="col-lg-4">	
+				  									<label for="salAs">Sales Associate:</label><br>
+				  									<select name="salAs">
+				  										<option value="" selected disabled hidden>Choose Sales Associate</option>
+				  										<option value="Sales1">Sales 1</option>
+				  										<option value="Sales2">Sales 2</option>
+				  										<option value="Sales3">Sales 3</option>
+				  									</select>
+				  								</div>
+
+				  								<div class="col-lg-4">
+				  									<label for="salTel">Telephone:</label><br>
+				  									<input type="tel" name="salTel" placeholder="xxx-xxx-xxxx">
+				  								</div>
+				  							</div>
+
+				  							<div class="row">
+				  								<div class="col-lg-4">
+				  									<label for="desNam">Designer:</label><br>
+				  									<select name="desNam">
+				  										<option value="" selected disabled hidden>Choose Designer</option>
+				  										<option value="des1">Designer 1</option>
+				  										<option value="des2">Designer 2</option>
+				  										<option value="des3">Designer 3</option>
+				  									</select>
+				  								</div>
+
+				  								<div class="col-lg-4">
+				  									<label for="desTel">Telephone:</label><br>
+				  									<input type="tel" name="desTel" placeholder="xxx-xxx-xxxx">
+				  								</div>
+				  							</div>
+				  						</fieldset>
+
+				  						<fieldset>
+				  							<legend>Project</legend>
+
+				  							<div class="row">
+				  								<div class="col-lg-4">
+				  									<label for="bidDate">Bid Date:</label><br>
+				  									<input type="date" name="bidDate">
+				  								</div>
+
+				  								<div class="col-lg-4">
+				  									<label for="pSite">Project Site:</label><br>
+				  									<input type="text" name="pSite" placeholder="Site of Project"><br>
+				  									<input type="text" name="pSiteDet" placeholder="Additonal Details">
+				  								</div>
+				  							</div>
+
+				  							<div class="row">
+				  								<div class="col-lg-4">
+				  									<label for="beDate">Est. Start Date:</label><br>
+				  									<input type="date" name="beDate">
+				  								</div>
+				  							</div>
+
+				  							<div class="row">
+				  								<div class="col-lg-4">
+				  									<label for="enDate">Est. Compl. Date:</label><br>
+				  									<input type="date" name="enDate">
+				  								</div>
+
+				  								<div class="col-lg-4">
+				  									<label for="bidAmo">Bid Amount:</label><br>
+				  									<input type="number" name="bidAmo" class="numInput" placeholder="Dollar Amount for the Bid">
+				  								</div>
+				  							</div>
+				  						</fieldset>
+
+				  						<fieldset>
+				  							<legend>Material Requirments</legend>
+
+				  							<h5>Plants:</h5>
+				  							<div class="row">
+				  								<div class="col-lg-1">
+				  									<label for="plaQnty">Qnty</label>
+				  								</div>
+				  								<div class="col-lg-2">
+				  									<label for="plaDesc">Desc</label>
+				  								</div>
+				  								<div class="col-lg-1">
+				  									<label for="plaSi">Size</label>
+				  								</div>
+				  								<div class="col-lg-1">
+				  									<label for="plaUni">Unit</label>
+				  								</div>
+				  								<div class="col-lg-2">
+				  									<label for="plaUPri">Unit Price</label>
+				  								</div>
+				  								<div class="col-lg-2">
+				  									<label for="plaEPri">Extended Price</label>
+				  								</div>
+				  							</div>
+
+				  							<div id="plants">
+					  							<div class="row">
+					  								<div class="col-lg-1">
+					  									<input type="number" name="plaQnty" class="smallNumInput" placeholder="Qnty">
+					  								</div>
+					  								<div class="col-lg-2">
+					  									<input type="text" name="plaDesc" placeholder="Description of Item">
+					  								</div>
+					  								<div class="col-lg-1">
+					  									<input type="number" name="plaSi" class="smallNumInput" placeholder="Size">
+					  								</div>
+					  								<div class="col-lg-1">
+					  									<input type="text" name="plaUni" size="3" class="smallTextInput" placeholder="ex: in">
+					  								</div>
+					  								<div class="col-lg-2">
+					  									<input type="number" name="plaEPri" class="numInput" placeholder="Dollar amount per unit">
+					  								</div>
+					  								<div class="col-lg-2">
+					  									 <input type="number" name="plaUPri" class="numInput" placeholder="Total dollar amount">
+					  								</div>
+					  							</div>
+					  						</div>
+
+					  						<div class="row">
+					  							<div class="col-lg-1">
+					  								<button type="button" onclick="plaAdd(plants)" class="addButton">+</button>
+					  								<button type="button" class="addButton">-</button>
+					  							</div>
+					  						</div>
+
+				  							<h5>Pottery:</h5>
+				  							<div class="row">
+				  								<div class="col-lg-1">
+				  									<label for="potQnty">Qnty</label>
+				  								</div>
+				  								<div class="col-lg-2">
+				  									<label for="potDesc">Desc</label>
+				  								</div>
+				  								<div class="col-lg-1">
+				  									<label for="potSi">Size</label>
+				  								</div>
+				  								<div class="col-lg-1">
+				  									<label for="potUni">Unit</label>
+				  								</div>
+				  								<div class="col-lg-2">
+				  									<label for="potUPri">Unit Price</label>
+				  								</div>
+				  								<div class="col-lg-2">
+				  									<label for="potEPri">Extended Price</label>
+				  								</div>
+				  							</div>
+
+				  							<div class="row">
+				  								<div class="col-lg-1">
+				  									<input type="number" name="potQnty" class="smallNumInput" placeholder="Qnty">
+				  								</div>
+				  								<div class="col-lg-2">
+				  									<input type="text" name="potDesc" placeholder="Description of Item">
+				  								</div>
+				  								<div class="col-lg-1">
+				  									<input type="number" name="potSi" class="smallNumInput" placeholder="Size">
+				  								</div>
+				  								<div class="col-lg-1">
+				  									<input type="text" name="potUni" size="3" class="smallTextInput" placeholder="ex: in">
+				  								</div>
+				  								<div class="col-lg-2">
+				  									<input type="number" name="potEPri" class="numInput" placeholder="Dollar amount per unit">
+				  								</div>
+				  								<div class="col-lg-2">
+				  									 <input type="number" name="potUPri" class="numInput" placeholder="Total dollar amount">
+				  								</div>
+				  							</div>
+
+				  							<div class="row">
+				  								<div class="col-lg-1">
+				  									<button type="button" class="addButton">+</button>
+				  									<button type="button" class="addButton">-</button>
+				  								</div>
+				  							</div>
+
+				  							<h5>Materials:</h5>
+				  							<div class="row">
+				  								<div class="col-lg-1">
+				  									<label for="matQnty">Qnty</label>
+				  								</div>
+				  								<div class="col-lg-2">
+				  									<label for="matDesc">Desc</label>
+				  								</div>
+				  								<div class="col-lg-1">
+				  									<label for="matSi">Size</label>
+				  								</div>
+				  								<div class="col-lg-1">
+				  									<label for="matUni">Unit</label>
+				  								</div>
+				  								<div class="col-lg-2">
+				  									<label for="matUPri">Unit Price</label>
+				  								</div>
+				  								<div class="col-lg-2">
+				  									<label for="matEPri">Extended Price</label>
+				  								</div>
+				  							</div>
+
+				  							<div class="row">
+				  								<div class="col-lg-1">
+				  									<input type="number" name="matQnty" class="smallNumInput" placeholder="Qnty">
+				  								</div>
+				  								<div class="col-lg-2">
+				  									<input type="text" name="matDesc" placeholder="Description of Item">
+				  								</div>
+				  								<div class="col-lg-1">
+				  									<input type="number" name="matSi" class="smallNumInput" placeholder="Size">
+				  								</div>
+				  								<div class="col-lg-1">
+				  									<input type="text" name="matUni" size="3" class="smallTextInput" placeholder="ex: in">
+				  								</div>
+				  								<div class="col-lg-2">
+				  									<input type="number" name="matEPri" class="numInput" placeholder="Dollar amount per unit">
+				  								</div>
+				  								<div class="col-lg-2">
+				  									 <input type="number" name="matUPri" class="numInput" placeholder="Total dollar amount">
+				  								</div>
+				  							</div>
+
+				  							<div class="row">
+				  								<div class="col-lg-1">
+				  									<button type="button" class="addButton">+</button>
+				  									<button type="button" class="addButton">-</button>
+				  								</div>
+				  							</div>
+				  						</fieldset>
+
+				  						<fieldset>
+				  							<legend>Labour Requirements</legend>
+
+				  							<div class="row">
+				  								<div class="col-lg-1">
+				  									<label for="labHours">Hours</label>
+				  								</div>
+				  								<div class="col-lg-2">
+				  									<label for="labDesc">Desc</label>
+				  								</div>
+				  								<div class="col-lg-2">
+				  									<label for="labUPri">Unit Price</label>
+				  								</div>
+				  								<div class="col-lg-2">
+				  									<label for="labEPri">Extended Price</label>
+				  								</div>
+				  							</div>
+
+				  							<div class="row">
+				  								<div class="col-lg-1">
+				  									<input type="number" name="labHours" class="smallNumInput" placeholder="Qnty">
+				  								</div>
+				  								<div class="col-lg-2">
+				  									<input type="text" name="labDesc" placeholder="Description of labour">
+				  								</div>
+				  								<div class="col-lg-2">
+				  									<input type="number" name="labUPri" class="numInput" placeholder="Dollar amount per hour">
+				  								</div>
+				  								<div class="col-lg-2">
+				  									<input type="number" name="labEPri" class="numInput" placeholder="Total dollar amount">
+				  								</div>
+				  							</div>
+
+				  							<div class="row">
+				  								<div class="col-lg-1">
+				  									<button type="button" class="addButton">+</button>
+				  									<button type="button" class="addButton">-</button>
+				  								</div>
+				  							</div>
+				  						</fieldset>
+
+				  						<fieldset>
+				  							<div class="row">
+				  								<div class="col-lg-2">
+				  									<button type="submit" class="regButton">Save Bid</button>
+				  							</div>
+				  							<div class="col-lg-2">
+				  								<button type="reset" class="regButton">Clear All</button>
+				  							</div>
+				  					</fieldset>
+			  					</form>
+			  					<br>
+			  					<br>
+			  					<br>
+			  					<br>
+			  				</div>
+			  			</div>
+		  			</div>
+
+		  			<div class="tab-pane" id="VDB" role="tabpanel">
+			  			<div class="FormArea">
+			  				<h1>View Design Bid</h1>
+
+			  				<div class="Container">
+			  					<form>
+			  						<fieldset>
+			  							<legend>Current Design Bids</legend>
+
+			  							<div class="row">
+			  								<div class="col-lg-2">
+			  									<button type="button" onclick="lonFill()" class="regButton">London Sq. Mall</button>
+			  								</div>
+
+			  								<div class="col-lg-2">
+			  									<button type="button" class="regButton">Client 1</button>
+			  								</div>
+
+			  								<div class="col-lg-2">
+			  									<button type="button" class="regButton">Client 2</button>
+			  								</div>
+
+			  								<div class="col-lg-2">
+			  									
+			  								</div>
+
+			  								<div class="col-lg-2">
+			  									
+			  								</div>
+
+			  								<div class="col-lg-2">
+			  									<button type="reset" class="regButton">Clear All</button>
+			  								</div>
+			  							</div>
+			  						</fieldset>
+
+			  						<h1>Design Bid</h1>
+
+			  						<fieldset>
+			  							<legend>Client Info</legend>
+
+			  							<div class ="row">
+				  							<div class ="col-lg-4">
+
+						  					<label for="cliNamOut">Client Name:</label><br>
+						  					<output name="cliNamOut" id="cliNamOut"></output>				
+				  							</div>
+
+				  								<div class="col-lg-4">
+				  									<label for="conNamOut">Contact Name:</label><br>
+				  									<output name="conNamOut" id="conNamOut"></output>
+				  								</div>
+				  							</div>
+
+				  							<div class ="row">
+				  								<div class="col-lg-4">
+				  									<label for="cliAddrOut">Client Address:</label><br>
+				  									<output name="cliAddrOut" id="cliAddrOut"></output>
+				  								</div>
+
+				  								<div class="col-lg-5">
+				  									<label for="cliPhoOut">Client Phone Number:</label><br>
+				  									<output name="cliPhoOut" id="cliPhoOut"></output>
+				  								</div>
+				  							</div>
+			  						</fieldset>
+
+			  						<fieldset>
+				  						<legend>NBD Staff</legend>
+				  						<div class="row">
+				  							<div class="col-lg-4">	
+				  								<label for="salAsOut">Sales Associate:</label><br>
+				  								<output name="salAsOut" id="salAsOut"></output>
+				  							</div>
+
+				  							<div class="col-lg-4">
+												<label for="salTelOut">Telephone:</label><br>
+			  									<output name="salTelOut" id="salTelOut"></output>
+			  								</div>
+				  						</div>
+
+				  						<div class="row">
+										<div class="col-lg-4">
+			  									<label for="desNamOut">Designer:</label><br>
+				  								<output name="desNamOut" id="desNamOut"></output>
+											</div>
+
+			  								<div class="col-lg-4">
+			  									<label for="desTelOut">Telephone:</label><br>
+			  									<output name="desTelOut" id="desTelOut"></output>
+			  								</div>
+			  							</div>
+			  						</fieldset>
+
+			  						<fieldset>
+				  							<legend>Project</legend>
+
+				  							<div class="row">
+				  								<div class="col-lg-4">
+				  									<label for="bidDateOut">Bid Date:</label><br>
+				  									<output name="bidDateOut" id="bidDateOut"></output>
+				  								</div>
+
+				  								<div class="col-lg-4">
+				  									<label for="pSiteOut">Project Site:</label><br>
+				  									<output name="pSiteOut" id="pSiteOut"></output><br>
+				  									<output name="pSiteDetOut" id="pSiteDetOut"></output>
+				  								</div>
+				  							</div>
+
+				  							<div class="row">
+				  								<div class="col-lg-4">
+				  									<label for="beDateOut">Est. Start Date:</label><br>
+				  									<output name="beDateOut" id="beDateOut"></output>
+				  								</div>
+				  							</div>
+
+				  							<div class="row">
+				  								<div class="col-lg-4">
+				  									<label for="enDateOut">Est. Compl. Date:</label><br>
+				  									<output name="enDateOut" id="enDateOut"></output>
+				  								</div>
+
+				  								<div class="col-lg-4">
+				  									<label for="bidAmoOut">Bid Amount:</label><br>
+				  									<output name="bidAmoOut" id="bidAmoOut"></output>
+				  								</div>
+				  							</div>
+				  						</fieldset>
+
+				  						<fieldset>
+				  							<legend>Material Requirments</legend>
+
+				  							<h5>Plants:</h5>
+				  							<div class="row">
+				  								<div class="col-lg-1">
+				  									<label for="plaQntyOut">Qnty</label>
+				  								</div>
+				  								<div class="col-lg-3">
+				  									<label for="plaDescOut">Desc</label>
+				  								</div>
+				  								<div class="col-lg-1">
+				  									<label for="plaSiOut">Size</label>
+				  								</div>
+				  								<div class="col-lg-1">
+				  									<label for="plaUniOut">Unit</label>
+				  								</div>
+				  								<div class="col-lg-2">
+				  									<label for="plaUPriOut">Unit Price</label>
+				  								</div>
+				  								<div class="col-lg-2">
+				  									<label for="plaEPriOut">Extended Price</label>
+				  								</div>
+				  							</div>
+
+				  							<div class="row">
+				  								<div class="col-lg-1">
+				  									<output id="plaQntyOut"></output>
+				  								</div>
+				  								<div class="col-lg-3">
+				  									<output id="plaDescOut"></output>
+				  								</div>
+				  								<div class="col-lg-1">
+				  									<output id="plaSiOut"></output>
+				  								</div>
+				  								<div class="col-lg-1">
+				  									<output id="plaUniOut"></output>
+				  								</div>
+				  								<div class="col-lg-2">
+				  									<output id="plaUPriOut"></output>
+				  								</div>
+				  								<div class="col-lg-2">
+				  									 <output id="plaEPriOut"></output>
+				  								</div>
+				  							</div>
+
+				  							<div class="row">
+				  								<div class="col-lg-1">
+				  									<output id="plaQntyOut2"></output>
+				  								</div>
+				  								<div class="col-lg-3">
+				  									<output id="plaDescOut2"></output>
+				  								</div>
+				  								<div class="col-lg-1">
+				  									<output id="plaSiOut2"></output>
+				  								</div>
+				  								<div class="col-lg-1">
+				  									<output id="plaUniOut2"></output>
+				  								</div>
+				  								<div class="col-lg-2">
+				  									<output id="plaUPriOut2"></output>
+				  								</div>
+				  								<div class="col-lg-2">
+				  									 <output id="plaEPriOut2"></output>
+				  								</div>
+				  							</div>
+
+				  							<div class="row">
+				  								<div class="col-lg-1">
+				  									<output id="plaQntyOut3"></output>
+				  								</div>
+				  								<div class="col-lg-3">
+				  									<output id="plaDescOut3"></output>
+				  								</div>
+				  								<div class="col-lg-1">
+				  									<output id="plaSiOut3"></output>
+				  								</div>
+				  								<div class="col-lg-1">
+				  									<output id="plaUniOut3"></output>
+				  								</div>
+				  								<div class="col-lg-2">
+				  									<output id="plaUPriOut3"></output>
+				  								</div>
+				  								<div class="col-lg-2">
+				  									 <output id="plaEPriOut3"></output>
+				  								</div>
+				  							</div>
+
+				  							<h5>Pottery:</h5>
+				  							<div class="row">
+				  								<div class="col-lg-1">
+				  									<label for="potQntyOut">Qnty</label>
+				  								</div>
+				  								<div class="col-lg-3">
+				  									<label for="potDescOut">Desc</label>
+				  								</div>
+				  								<div class="col-lg-1">
+				  									<label for="potSiOut">Size</label>
+				  								</div>
+				  								<div class="col-lg-1">
+				  									<label for="potUniOut">Unit</label>
+				  								</div>
+				  								<div class="col-lg-2">
+				  									<label for="potUPriOut">Unit Price</label>
+				  								</div>
+				  								<div class="col-lg-2">
+				  									<label for="potEPriOut">Extended Price</label>
+				  								</div>
+				  							</div>
+
+				  							<div class="row">
+				  								<div class="col-lg-1">
+				  									<output id="potQntyOut"></output>
+				  								</div>
+				  								<div class="col-lg-3">
+				  									<output id="potDescOut"></output>
+				  								</div>
+				  								<div class="col-lg-1">
+				  									<output id="potSiOut"></output>
+				  								</div>
+				  								<div class="col-lg-1">
+				  									<output id="potUniOut"></output>
+				  								</div>
+				  								<div class="col-lg-2">
+				  									<output id="potUPriOut"></output>
+				  								</div>
+				  								<div class="col-lg-2">
+				  									 <output id="potEPriOut"></output>
+				  								</div>
+				  							</div>
+
+				  							<div class="row">
+				  								<div class="col-lg-1">
+				  									<output id="potQntyOut2"></output>
+				  								</div>
+				  								<div class="col-lg-3">
+				  									<output id="potDescOut2"></output>
+				  								</div>
+				  								<div class="col-lg-1">
+				  									<output id="potSiOut2"></output>
+				  								</div>
+				  								<div class="col-lg-1">
+				  									<output id="potUniOut2"></output>
+				  								</div>
+				  								<div class="col-lg-2">
+				  									<output id="potUPriOut2"></output>
+				  								</div>
+				  								<div class="col-lg-2">
+				  									 <output id="potEPriOut2"></output>
+				  								</div>
+				  							</div>
+
+				  							<h5>Materials:</h5>
+				  							<div class="row">
+				  								<div class="col-lg-1">
+				  									<label for="matQntyOut">Qnty</label>
+				  								</div>
+				  								<div class="col-lg-3">
+				  									<label for="matDescOut">Desc</label>
+				  								</div>
+				  								<div class="col-lg-1">
+				  									<label for="matSiOut">Size</label>
+				  								</div>
+				  								<div class="col-lg-1">
+				  									<label for="matUniOut">Unit</label>
+				  								</div>
+				  								<div class="col-lg-2">
+				  									<label for="matUPriOut">Unit Price</label>
+				  								</div>
+				  								<div class="col-lg-2">
+				  									<label for="matEPriOut">Extended Price</label>
+				  								</div>
+				  							</div>
+
+				  							<div class="row">
+				  								<div class="col-lg-1">
+				  									<output id="matQntyOut"></output>
+				  								</div>
+				  								<div class="col-lg-3">
+				  									<output id="matDescOut"></output>
+				  								</div>
+				  								<div class="col-lg-1">
+				  									<output id="matSiOut"></output>
+				  								</div>
+				  								<div class="col-lg-1">
+				  									<output id="matUniOut"></output>
+				  								</div>
+				  								<div class="col-lg-2">
+				  									<output id="matUPriOut"></output>
+				  								</div>
+				  								<div class="col-lg-2">
+				  									 <output id="matEPriOut"></output>
+				  								</div>
+				  							</div>
+
+				  							<div class="row">
+				  								<div class="col-lg-1">
+				  									<output id="matQntyOut2"></output>
+				  								</div>
+				  								<div class="col-lg-3">
+				  									<output id="matDescOut2"></output>
+				  								</div>
+				  								<div class="col-lg-1">
+				  									<output id="matSiOut2"></output>
+				  								</div>
+				  								<div class="col-lg-1">
+				  									<output id="matUniOut2"></output>
+				  								</div>
+				  								<div class="col-lg-2">
+				  									<output id="matUPriOut2"></output>
+				  								</div>
+				  								<div class="col-lg-2">
+				  									 <output id="matEPriOut2"></output>
+				  								</div>
+				  							</div>
+				  					</fieldset>
+
+				  					<fieldset>
+				  							<legend>Labour Requirements</legend>
+
+				  							<div class="row">
+				  								<div class="col-lg-1">
+				  									<label for="labHoursOut">Hours</label>
+				  								</div>
+				  								<div class="col-lg-3">
+				  									<label for="labDescOut">Desc</label>
+				  								</div>
+				  								<div class="col-lg-2">
+				  									<label for="labUPriOut">Unit Price</label>
+				  								</div>
+				  								<div class="col-lg-2">
+				  									<label for="labEPriOut">Extended Price</label>
+				  								</div>
+				  							</div>
+
+				  							<div class="row">
+				  								<div class="col-lg-1">
+				  									<output id="labHoursOut"></output>
+				  								</div>
+				  								<div class="col-lg-3">
+				  									<output id="labDescOut"></output>
+				  								</div>
+				  								<div class="col-lg-2">
+				  									<output id="labUPriOut"></output>
+				  								</div>
+				  								<div class="col-lg-2">
+				  									<output id="labEPriOut"></output>
+				  								</div>
+				  							</div>
+
+				  							<div class="row">
+				  								<div class="col-lg-1">
+				  									<output id="labHoursOut2"></output>
+				  								</div>
+				  								<div class="col-lg-3">
+				  									<output id="labDescOut2"></output>
+				  								</div>
+				  								<div class="col-lg-2">
+				  									<output id="labUPriOut2"></output>
+				  								</div>
+				  								<div class="col-lg-2">
+				  									<output id="labEPriOut2"></output>
+				  								</div>
+				  							</div>
+
+				  							<div class="row">
+				  								<div class="col-lg-1">
+				  									<output id="labHoursOut3"></output>
+				  								</div>
+				  								<div class="col-lg-3">
+				  									<output id="labDescOut3"></output>
+				  								</div>
+				  								<div class="col-lg-2">
+				  									<output id="labUPriOut3"></output>
+				  								</div>
+				  								<div class="col-lg-2">
+				  									<output id="labEPriOut3"></output>
+				  								</div>
+				  							</div>
+				  						</fieldset>
+			  					</form>
+			  					<br>
+			  					<br>
+			  					<br>
+			  					<br>
+			  				</div>
+			  			</div>
+		  			</div>
+
+		 			<div class="tab-pane" id="CDBU" role="tabpanel">
+					 	<div class="FormArea">
+					 		<h1>New Design Budget</h1>
+
+					 		<form>
+								<fieldset>
+									<legend>Design Bid</legend>
+
+									<div class="row">
+										<div class="col-lg-3">
+											<label for="bidSele">Select a Bid to create a Budget for:</label><br>
+											<select>
+												<option value="" selected disabled hidden>Select Bid</option>
+												<option value="bid1">London Sq. Mall</option>
+												<option value="bid2">Bid 2</option>
+												<option value="bid3">Bid 3</option>
+											</select>
+										</div>							
+									</div>
+								</fieldset>
+				  				<fieldset>
+				  					<legend>Design Budget</legend>
+
+				  						<div class="row">
+				  							<div class="col-lg-2">	
+				  							</div>
+
+				  								<div class="col-lg-3">
+				  									<label for="">Task</label>
+				  								</div>
+
+				  								<div class="col-lg-2">
+				  									<label for="">Date</label>
+				  								</div>
+
+				  								<div class="col-lg-1">
+				  									<label for="">Hours</label>
+				  								</div>
+				  							</div>
+
+				  							<div class="row">
+				  								<div class="col-lg-3">
+				  									<label class="budgeTitle">Hours to Date:</label>
+				  								</div>
+				  							</div>
+
+				  							<div class="row">
+				  								<div class="col-lg-2">
+
+				  								</div>
+
+				  								<div class="col-lg-3">
+				  									<input type="text" name="htdTask" placeholder="Description of Task">
+				  								</div>
+
+				  								<div class="col-lg-2">
+				  									<input type="date" name="htdDate" class="budgeDate">
+				  								</div>
+
+				  								<div class="col-lg-1">
+				  									<input type="number" name="htdHours" class="smallNumInput">
+				  								</div>
+				  							</div>
+
+				  							<div class="row">
+				  								<div class="col-lg-2">
+				  									
+				  								</div>
+
+				  								<div class="col-lg-3">
+				  									<button type="button" class="addButton">+</button>
+				  									<button type="button" class="addButton">-</button>
+				  								</div>
+				  							</div>
+
+				  							<div class="row">
+				  								<div class="col-lg-2">
+				  									<label class="budgeTitle">Estimated Hours:</label>
+				  								</div>
+				  							</div>
+
+				  							<div class="row">
+				  								<div class="col-lg-2">
+
+				  								</div>
+
+				  								<div class="col-lg-3">
+				  									<input type="text" name="ehTask" placeholder="Description of Task">
+				  								</div>
+
+				  								<div class="col-lg-2">
+				  									<input type="date" name="ehDate" class="budgeDate">
+				  								</div>
+
+				  								<div class="col-lg-1">
+				  									<input type="number" name="ehHours" class="smallNumInput">
+				  								</div>
+				  							</div>
+
+				  							<div class="row">
+				  								<div class="col-lg-2">
+				  									
+				  								</div>
+
+				  								<div class="col-lg-3">
+				  									<button type="button" class="addButton">+</button>
+				  									<button type="button" class="addButton">-</button>
+				  								</div>
+				  							</div>
+
+				  							<div class="row">
+				  								<div class="col-lg-2">
+				  									<label class="budgeTitle">Total Hours:</label>
+				  								</div>
+
+				  								<div class="col-lg-3">
+				  								</div>
+
+				  								<div class="col-lg-2">
+				  								</div>
+
+				  								<div class="col-lg-1">
+				  									<input type="number" name="totHours" class="smallNumInput">
+				  								</div>
+				  							</div>
+
+				  							<div class="row">
+				  								<div class="col-lg-2">
+				  								</div>
+
+				  								<div class="col-lg-3">
+				  									<label class="penFill">Signature</label>
+				  								</div>
+
+				  								<div class="col-lg-2">
+				  									<label class="penFill">Date</label>
+				  								</div>
+
+				  								<div class="col-lg-1">
+				  								</div>
+				  							</div>
+				  						</fieldset>
+
+				  						<fieldset>
+				  							<div class="row">
+				  								<div class="col-lg-2">
+				  									<button type="submit" class="regButton">Save Bid</button>
+				  							</div>
+				  							<div class="col-lg-2">
+				  								<button type="reset" class="regButton">Clear All</button>
+				  							</div>
+				  					</fieldset>
+					 				</fieldset>
+					 			</form>
+					 			<br>
+					 			<br>
+					 			<br>
+					 			<br>
+					 		</div>
+		 			</div>
+
+		 			<div class="tab-pane" id="VDBU" role="tabpanel">
+					 	<div class="FormArea">
+
+					 		<div class="Container">
+					 			<h1>View a Design Budget</h1>
+
+					 			<form>
+					 				<fieldset>
+					 					<legend>All Budgets</legend>
+
+					 					<div class="row">
+			  								<div class="col-lg-2">
+			  									<button type="button" class="regButton">London Sq. Mall</button>
+			  								</div>
+
+			  								<div class="col-lg-2">
+			  									<button type="button" class="regButton">Client 1</button>
+			  								</div>
+
+			  								<div class="col-lg-2">
+			  									<button type="button" class="regButton">Client 2</button>
+			  								</div>
+			  							</div>
+					 				</fieldset>
+
+					 				<fieldset>
+					 					<legend>Design Budget</legend>
+
+					 					<div class="row">
+				  								<div class="col-lg-2">	
+				  								</div>
+
+				  								<div class="col-lg-3">
+				  									<label for="">Task</label>
+				  								</div>
+
+				  								<div class="col-lg-2">
+				  									<label for="">Date</label>
+				  								</div>
+
+				  								<div class="col-lg-1">
+				  									<label for="">Hours</label>
+				  								</div>
+				  							</div>
+
+				  							<div class="row">
+				  								<div class="col-lg-3">
+				  									<label class="budgeTitle">Hours to Date:</label>
+				  								</div>
+				  							</div>
+
+				  							<div class="row">
+				  								<div class="col-lg-2">
+
+				  								</div>
+
+				  								<div class="col-lg-3">
+				  									<output name="htdDescOut"></output>
+				  								</div>
+
+				  								<div class="col-lg-2">
+				  									<output name="htdDateOut"></output>
+				  								</div>
+
+				  								<div class="col-lg-1">
+				  									<output name="htdHoursOut"></output>
+				  								</div>
+				  							</div>
+
+				  							<div class="row">
+				  								<div class="col-lg-2">
+				  									<label class="budgeTitle">Estimated Hours:</label>
+				  								</div>
+				  							</div>
+
+				  							<div class="row">
+				  								<div class="col-lg-2">
+
+				  								</div>
+
+				  								<div class="col-lg-3">
+				  									<output name="ehDescOut"></output>
+				  								</div>
+
+				  								<div class="col-lg-2">
+				  									<output name="ehDateOut"></output>
+				  								</div>
+
+				  								<div class="col-lg-1">
+				  									<output name="ehHoursOut"></output>
+				  								</div>
+				  							</div>
+
+				  							<div class="row">
+				  								<div class="col-lg-2">
+				  									<label class="budgeTitle">Total Hours:</label>
+				  								</div>
+
+				  								<div class="col-lg-3">
+				  								</div>
+
+				  								<div class="col-lg-2">
+				  								</div>
+
+				  								<div class="col-lg-1">
+				  									<output name="totHoursOut"></output>
+				  								</div>
+				  							</div>
+
+				  							<div class="row">
+				  								<div class="col-lg-2">
+				  								</div>
+
+				  								<div class="col-lg-3">
+				  									<label class="penFill">Signature</label>
+				  								</div>
+
+				  								<div class="col-lg-2">
+				  									<label class="penFill">Date</label>
+				  								</div>
+
+				  								<div class="col-lg-1">
+				  								</div>
+				  							</div>
+					 				</fieldset>
+					 			</form>
+					 		</div>
+					 	</div>
+		 			</div>
+				</div>
+	    	</div>
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <script src="js/designScript.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+	</div>
+  </body>
+</html>
