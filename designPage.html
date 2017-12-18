@@ -88,6 +88,7 @@
 							</form>
 						</div>	
 					</div>
+
 		  			<div class="tab-pane" id="CDB" role="tabpanel">
 			  				<div class="FormArea">
 			  					<h1>Create new Design Bid</h1>
@@ -102,7 +103,7 @@
 						  									<label for="cliNam">Client Name:</label><br>
 						  									<select name="cliNam">
 						  										<option value="" selected disabled hidden>Choose Client</option>
-						  										<option value="cli1">Client 1</option>
+						  										<option value="cli1">London Sq. Mall</option>
 						  										<option value="cli2">Client 2</option>
 						  										<option value="cli3">Client 3</option>
 						  										<option value="cli4">Client 4</option>
@@ -840,7 +841,7 @@
 					 	<div class="FormArea">
 					 		<h1>New Design Budget</h1>
 
-					 		<form>
+					 		<form oninput="totHours.value = htdHours.valueAsNumber + ehHours.valueAsNumber">
 								<fieldset>
 									<legend>Design Bid</legend>
 
@@ -896,7 +897,7 @@
 				  								</div>
 
 				  								<div class="col-lg-1">
-				  									<input type="number" name="htdHours" class="smallNumInput">
+				  									<input type="number" name="htdHours" id="htdHours" class="smallNumInput" value="0">
 				  								</div>
 				  							</div>
 
@@ -931,7 +932,7 @@
 				  								</div>
 
 				  								<div class="col-lg-1">
-				  									<input type="number" name="ehHours" class="smallNumInput">
+				  									<input type="number" name="ehHours" id="ehHours" class="smallNumInput" value="0">
 				  								</div>
 				  							</div>
 
@@ -958,7 +959,7 @@
 				  								</div>
 
 				  								<div class="col-lg-1">
-				  									<input type="number" name="totHours" class="smallNumInput">
+				  									<output name="totHours">0</output>
 				  								</div>
 				  							</div>
 
