@@ -20,11 +20,11 @@
 
 		   <div id="Navigation">
 				<ul class="list-unstyled">
-					<li id="jumbotronNav" class="active"><a href="#">Admin</a></li>
+					<li id="jumbotronNav"><a href="#">Admin</a></li>
 
 					<li id="jumbotronNav"><a href="#">Design Manager</a></li>
 
-					<li id="jumbotronNav"><a href="#">Production Manager</a></li>
+					<li id="jumbotronNav" class="active"><a href="#">Production Manager</a></li>
 
 					<li id="jumbotronNav"><a href="#">Design Worker</a></li>
 
@@ -36,7 +36,10 @@
 	    <div class="navColor ">
 	    	<ul class="nav nav-tabs">
 			  <li class="nav-item">
-			    <a href="#CPP" class="nav-link active" role="tab" data-toggle="tab">Create Production Plan</a>
+			    <a href="#Home" class="nav-link active" role="tab" data-toggle="tab">Home</a>
+			  </li>
+			  <li class="nav-item">
+			    <a href="#CPP" class="nav-link" role="tab" data-toggle="tab">Create Production Plan</a>
 			  </li>
 			  <li class="nav-item">
 			    <a  href="#VPP" class="nav-link" role="tab" data-toggle="tab">View Production Plan</a>
@@ -52,8 +55,16 @@
 			<!--Tab Content Menu-->
 			<div class="tab-content fixed-right" id="myTabContent">
 				<!-- Tab Pane Menus-->
+					<!--This is the TYab for the home page-->
+					<div class="tab-pane active" id="Home" role="tabpanel">
+						<div class="FormArea">
+							<div class="Container">
+
+							</div>
+						</div>
+					</div>
 					<!--This is the Tab for Creating a production plan-->
-		  			<div class="tab-pane active" id="CPP" role="tabpanel">
+		  			<div class="tab-pane" id="CPP" role="tabpanel">
 			  				<div class="FormArea">
 			  					<div class="Container">
 				  					<form name="Create Production Plan">
@@ -565,6 +576,510 @@
 		  			<!--This is the tab to view the production plans-->
 		  			<div class="tab-pane" id="VPP" role="tabpanel">
 			  				<div class="FormArea">
+			  					<div class="Container">
+				  					<form name="View Production Plan">
+				  						<fieldset>
+				  							<legend>Production Plan</legend>
+				  								<div class="row">
+				  									<div class="col-sm-2">
+						  								<div class="form-group">
+						  									<output class="form-control" type="date" name="date"/></output><br><br>
+						  								</div>
+					  								</div>
+				  								</div>
+
+				  								<!--Project Information Portion-->
+
+				  								<label class="Label">Project Information</label><br>
+				  								<div class="row">
+				  									<div class="col-sm-2">
+				  										<div class="form-group">
+				  											<label>Project:</label>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-3">
+				  										<div class="form-group">
+				  											<output type="text" class="form-control" placeholder="Please insert project title here..."/></output>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-1">
+				  											<label>Project Site:</label>
+				  									</div>
+				  									<div class="col-md-4">
+				  										<div class="form-group">
+														  <output class="form-control" rows="2" id="Project Site" placeholder="Location of the project..."></output>
+														</div>
+				  									</div>
+				  								</div>
+
+				  								<div class="row">
+				  									<div class="col-sm-2">
+				  										<div>
+				  											<label>Begin Date:</label>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-2">
+				  										<div class="form-group">
+				  											<output type="date" class="form-control"/></output>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-2 offset-sm-1">
+				  										<div class="form-group">
+				  											<label>Bid Amount:</label>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-3">
+				  										<div class="form-group">
+				  											<output type="text" class="form-control" placeholder="Insert bid amount..."/></output>
+				  										</div>
+				  									</div>
+				  								</div>
+				  								<div class="row">
+				  									<div class="col-sm-2">
+				  										<div class="form-group">
+				  											<label>Compl. Date</label>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-2">
+				  										<div class="form-group">
+				  											<output type="date" class="form-control"/></output>
+				  										</div>
+				  									</div>
+				  								</div>
+
+				  								<!--Project Team Portion-->
+				  								<Label class="Label">Project Team</label>
+				  								<div class="row">
+				  									<div class="col-sm-2">
+				  										<div class="form-group">
+				  											<label>Sales Assoc.:</label>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-2">
+				  										<div class="form-group">
+				  											<output type="text" class="form-control" placeholder="Insert name...."/></output>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-1 offset-sm-1">
+				  										<div class="form-group">
+				  											Production:
+				  										</div>
+				  									</div>
+				  									<div class="col-md-4">
+				  										<div class="form-group">
+														  <output class="form-control" rows="2" id="Project Site" placeholder="Names for production here..."></output>
+														</div>
+				  									</div>
+				  								</div>
+												<div class="row">
+				  									<div class="col-sm-2">
+				  										<div>
+				  											<label>Designer:</label>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-2">
+				  										<div class="form-group">
+				  											<output type="text" class="form-control" placeholder="Insert names here..."></output>
+				  										</div>
+				  									</div>
+				  								</div>
+
+				  								<!--Material Requirements Portion-->
+				  								<Label class="Label">Material Requirements</Label>
+				  								<div class="row">
+				  									<div class="col-sm-1 offset-sm-1">
+				  										<div class="form-group">
+				  											<label>Qnty</label>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-1">
+				  										<div class="form-group">
+				  											<label>Code/Desc</label>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-1">
+				  										<div class="form-group">
+				  											<label>Size</label>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-1">
+				  										<div class="form-group">
+				  										<label>Net/Unit</label>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-1">
+				  										<div class="form-group">
+				  										<label>Ext. Cost</label>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-1">
+				  										<div class="form-group">
+				  										<label>Deliver</label>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-1 offset-sm-1">
+				  										<div class="form-group">
+				  										<label>Install</label>
+				  										</div>
+				  									</div>
+				  								</div>
+				  								<div class="row">
+				  									<div class="col-sm-1">
+				  										<label>Plants:</label>
+				  									</div>
+				  								</div>
+				  								<!--Rows Plants-->
+				  								<div class="row">
+				  									<div class="col-sm-1 offset-sm-1">
+				  										<div class="form-group">
+				  											<output type="text" class="form-control"></output>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-1">
+				  										<div class="form-group">
+				  											<output type="text" class="form-control"></output>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-1">
+				  										<div class="form-group">
+				  											<output type="text" class="form-control"></output>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-1">
+				  										<div class="form-group">
+				  											<output type="text" class="form-control"></output>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-1">
+				  										<div class="form-group">
+				  											<output type="text" class="form-control"></output>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-2">
+				  										<div class="form-group">
+				  											<output type="datetime-local" class="form-control"></output>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-2">
+				  										<div class="form-group">
+				  											<output type="date" class="form-control"></output>
+				  										</div>
+				  									</div>
+				  								</div>
+				  								<!-- Rows Pottery -->
+				  								<div class="row">
+				  									<div class="col-sm-1">
+				  										<label>Pottery:</label>
+				  									</div>
+				  								</div>
+				  								<div class="row">
+				  									<div class="col-sm-1 offset-sm-1">
+				  										<div class="form-group">
+				  											<output type="text" class="form-control"></output>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-1">
+				  										<div class="form-group">
+				  											<output type="text" class="form-control"></output>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-1">
+				  										<div class="form-group">
+				  											<output type="text" class="form-control"></output>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-1">
+				  										<div class="form-group">
+				  											<output type="text" class="form-control"></output>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-1">
+				  										<div class="form-group">
+				  											<output type="text" class="form-control"></output>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-2">
+				  										<div class="form-group">
+				  											<output type="datetime-local" class="form-control"></output>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-2">
+				  										<div class="form-group">
+				  											<output type="date" class="form-control"></output>
+				  										</div>
+				  									</div>
+				  								</div>
+				  								<!-- Rows Materials -->
+				  								<div class="row">
+				  									<div class="col-sm-1">
+				  										<label>Materials:</label>
+				  									</div>
+				  								</div>
+				  								<div class="row">
+				  									<div class="col-sm-1 offset-sm-1">
+				  										<div class="form-group">
+				  											<output type="text" class="form-control"></output>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-1">
+				  										<div class="form-group">
+				  											<output type="text" class="form-control"></output>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-1">
+				  										<div class="form-group">
+				  											<output type="text" class="form-control"></output>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-1">
+				  										<div class="form-group">
+				  											<output type="text" class="form-control"></output>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-1">
+				  										<div class="form-group">
+				  											<output type="text" class="form-control"></output>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-2">
+				  										<div class="form-group">
+				  											<output type="datetime-local" class="form-control"></output>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-2">
+				  										<div class="form-group">
+				  											<output type="date" class="form-control"></output>
+				  										</div>
+				  									</div>
+				  								</div>
+				  								<!-- Rows Tools -->
+				  								<div class="row">
+				  									<div class="col-sm-1">
+				  										<label>Tools:</label>
+				  									</div>
+				  								</div>
+				  								<div class="row">
+				  									<div class="col-sm-1 offset-sm-1">
+				  										<div class="form-group">
+				  											<output type="text" class="form-control"></output>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-1">
+				  										<div class="form-group">
+				  											<output type="text" class="form-control"></output>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-1">
+				  										<div class="form-group">
+				  											<output type="text" class="form-control"></output>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-1">
+				  										<div class="form-group">
+				  											<output type="text" class="form-control"></output>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-1">
+				  										<div class="form-group">
+				  											<output type="text" class="form-control"></output>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-2">
+				  										<div class="form-group">
+				  											<output type="datetime-local" class="form-control"></output>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-2">
+				  										<div class="form-group">
+				  											<output type="date" class="form-control"></output>
+				  										</div>
+				  									</div>
+				  								</div>
+
+				  								<!-- Labour Requirements Section -->
+				  								<label class="Label">Labor Requirement</label>
+				  								<div class="row">
+				  									<div class="col-sm-3">
+				  										<div class="form-group">
+				  											<label>Desc</label>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-1">
+				  										<div class="form-group">
+				  											<label>Hours</label>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-1">
+				  										<div class="form-group">
+				  											<label>Cost/Hr</label>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-1">
+				  										<div class="form-group">
+				  											<label>Ext. Cost</label>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-1">
+				  										<div class="form-group">
+				  											<label>Time</label>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-3">
+				  										<div class="form-group">
+				  											<label>Tasks</label>
+				  										</div>
+				  									</div>
+				  								</div>
+				  								<!--outputs for labor-->
+				  								<div class="row">
+				  									<div class="col-sm-3">
+				  										<div class="form-group">
+				  											<output type="text" class="form-control"></output>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-1">
+				  										<div class="form-group">
+				  											<output type="text" class="form-control"></output>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-1">
+				  										<div class="form-group">
+				  											<output type="text" class="form-control"></output>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-1">
+				  										<div class="form-group">
+				  											<output type="text" class="form-control"></output>
+				  										</div>
+				  									</div>
+				  									<div class="col-xs-2">
+				  										<div class="form-group">
+				  											<output type="time" class="form-control"></output>
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-3">
+				  										<div class="form-group">
+				  											<output type="text" class="form-control"></output>
+				  										</div>
+				  									</div>
+				  								</div><br><br>
+
+				  								<div class="row">
+					  								<div class="col-sm-4">
+					  									<div class="form-group">
+					  										<label>Total Est. Designer Hours/Costs:</label>
+					  									</div>
+					  								</div>
+					  								<div class="col-sm-1">
+					  									<div class="form-group">
+					  										<output type="text" class="form-control"/></output>
+					  									</div>
+					  								</div>
+					  								<div class="col-sm-2">
+					  									<div class="form-group">
+					  										<output type="text" class="form-control"/></output>
+					  									</div>
+					  								</div>
+				  								</div>
+					  							<div class="row">
+					  								<div class="col-sm-3 offset-sm-1">
+					  									<div class="form-group">
+						  										<label>Bid Process</label>
+						  								</div>
+						  							</div>
+						  								<div class="col-sm-1">
+						  									<div class="form-group">
+						  										<output type="text" class="form-control"/></output>
+						  									</div>
+						  								</div>
+						  								<div class="col-sm-2">
+						  									<div class="form-group">
+						  										<output type="text" class="form-control"/></output>
+						  									</div>
+						  								</div>
+					  							</div>
+					  							<div class="row">
+					  								<div class="col-sm-3 offset-sm-1">
+					  									<div class="form-group">
+						  									<label>Production</label>
+						  								</div>
+						  							</div>
+						  								<div class="col-sm-1">
+						  									<div class="form-group">
+						  										<output type="text" class="form-control"/></output>
+						  									</div>
+						  								</div>
+						  								<div class="col-sm-2">
+						  									<div class="form-group">
+						  										<output type="text" class="form-control"/></output>
+						  									</div>
+						  								</div>
+				  								</div>
+					  							<div class="row">
+					  								<div class="col-sm-4">
+					  									<div class="form-group">
+					  										<label>Total Est. Prod. Labor Hours/Costs:</label>
+					  									</div>
+					  								</div>
+					  								<div class="col-sm-1">
+					  									<div class="form-group">
+					  										<output type="text" class="form-control"/></output>
+					  									</div>
+					  								</div>
+						  								<div class="col-sm-2">
+						  									<div class="form-group">
+						  										<output type="text" class="form-control"/></output>
+						  									</div>
+						  								</div>
+				  								</div>
+					  							<div class="row">
+					  								<div class="col-sm-4">
+					  									<div class="form-group">
+					  										<label>Total Est. Material Costs:</label>
+					  									</div>
+					  								</div>
+					  								<div class="col-sm-1">
+					  									<div class="form-group">
+					  										<output type="text" class="form-control"/></output>
+					  									</div>
+					  								</div>
+						  								<div class="col-sm-2">
+						  									<div class="form-group">
+						  										<output type="text" class="form-control"/></output>
+						  									</div>
+						  								</div>
+				  								</div>
+					  							<div class="row">
+					  								<div class="col-sm-4">
+					  									<div class="form-group">
+					  										<label>Total Est. Hours/Costs:</label>
+					  									</div>
+					  								</div>
+					  								<div class="col-sm-1">
+					  									<div class="form-group">
+					  										<output type="text" class="form-control"/></output>
+					  									</div>
+					  								</div>
+						  								<div class="col-sm-2">
+						  									<div class="form-group">
+						  										<output type="text" class="form-control"/></output>
+						  									</div>
+						  								</div>
+						  								<div class="col-sm-2">
+						  									<div class="form-group">
+						  										<label>(%<output type="text" class="form-control"/></output>percent of the bid.)</label>
+						  									</div>
+						  								</div>
+				  								</div>
+
+				  							<button type="submit" class="btn-lg btn-success" id="btnSubmit">Submit</button>
+				  							<button type="button" class="btn-lg btn-warning" id="btnReset">Reset Fields</button>
+
+
+				  						</fieldset>
+				  					</form>
+
+			  					</div>
 			  				</div>
 		  			</div>
 		  			<!--This is the create work report tab-->
