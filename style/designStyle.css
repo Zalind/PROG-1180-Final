@@ -1,0 +1,97 @@
+h5{
+	font-weight: normal;
+}
+
+fieldset{
+	padding-bottom: 10px;
+	margin-bottom: 15px;
+}
+
+legend{
+	border-bottom: 2px solid;
+}
+
+label{
+	margin-bottom: 2px;
+}
+
+input[type=text],
+input[type=tel],
+input[type=email],
+input[type=date],
+input[type=number],
+select{
+	width: 12vw;
+	height: 1.75vw;
+	margin-bottom: 3px;
+	border: 1px solid black;
+}
+
+output{
+	font-weight: bold;
+}
+
+.FormArea{
+	overflow: scroll;
+	padding-left: 10px;
+}
+
+.smallNumInput{
+	width: 3.25vw  !important;
+}
+
+.smallTextInput{
+	width: 3.25vw  !important;
+}
+
+.regButton{
+	height: 5vw;
+	width: 8vw;
+	background-color: #142E34;
+	color: #fff;
+	border-radius: 8px;
+}
+
+.regButton:hover{
+	background-color: #00D778;
+}
+
+.addButton{
+	height: 2vw;
+	width: 2vw;
+	background-color: #142E34;
+	color: #fff;
+	border-radius: 8px;
+}
+
+.addButton:hover{
+	background-color: #00D778;
+}
+
+.budgeTitle{
+	border-bottom: 1px solid black !important;
+}
+
+.budgeDate{
+	width: 9.5vw !important;
+}
+
+.penFill{
+	border-top: 1px solid black !important;
+	width: 10vw;
+	text-align: center;
+	margin-top: 50px;
+}
+
+.msg{
+	display: inline-block;
+	background-color: #142E34;
+	color: #fff;
+	font-weight: bold;
+	height: 2vw;
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-top: 4px;
+	margin-top: 5px;
+	border-radius: 8px;
+}
