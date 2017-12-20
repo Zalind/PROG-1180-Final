@@ -13,7 +13,7 @@
   </head>
 
 
-  <body>
+  <body onload="setDate()">
   	<!-- Body for the website -->
   	<div id="Container">
   		<!--Navigation Menu(On left of screen)-->
@@ -101,10 +101,10 @@
 				  										<div class ="col-lg-4">
 
 						  									<label for="cliNam">Client Name:</label><br>
-						  									<select name="cliNam">
+						  									<select name="cliNam" onchange="cliFill()">
 						  										<option value="" selected disabled hidden>Choose Client</option>
-						  										<option value="cli1">London Sq. Mall</option>
-						  										<option value="cli2">Client 2</option>
+						  										<option value="cli1" id="cli1">London Sq. Mall</option>
+						  										<option value="cli2" id="cli2">Client 2</option>
 						  										<option value="cli3">Client 3</option>
 						  										<option value="cli4">Client 4</option>
 						  										<option value="cli5">Client 5</option>
@@ -113,19 +113,19 @@
 
 				  								<div class="col-lg-4">
 				  									<label for="conNam">Contact Name:</label><br>
-				  									<input type="text" name="conNam" placeholder="Enter Contact Name">
+				  									<input type="text" name="conNam" id="conNam" placeholder="Enter Contact Name">
 				  								</div>
 				  							</div>
 
 				  							<div class ="row">
 				  								<div class="col-lg-4">
 				  									<label for="cliAddr">Client Address:</label><br>
-				  									<input type="text" name="cliAddr" placeholder="Enter Address">
+				  									<input type="text" name="cliAddr" id="cliAddr" placeholder="Enter Address">
 				  								</div>
 
 				  								<div class="col-lg-5">
 				  									<label for="cliPho">Client Phone Number:</label><br>
-				  									<input type="tel" name="cliPho" placeholder="xxx-xxx-xxxx">
+				  									<input type="tel" name="cliPho" id="cliPho" placeholder="xxx-xxx-xxxx">
 				  								</div>
 				  							</div>
 				  						</fieldset>
@@ -135,34 +135,34 @@
 				  							<div class="row">
 				  								<div class="col-lg-4">	
 				  									<label for="salAs">Sales Associate:</label><br>
-				  									<select name="salAs">
+				  									<select name="salAs" onchange="saleFill()">
 				  										<option value="" selected disabled hidden>Choose Sales Associate</option>
-				  										<option value="Sales1">Sales 1</option>
-				  										<option value="Sales2">Sales 2</option>
-				  										<option value="Sales3">Sales 3</option>
+				  										<option value="Sales1" id="sales1">Bob Reinhardt</option>
+				  										<option value="Sales2" id="sales2">Sales 2</option>
+				  										<option value="Sales3" id="sales3">Sales 3</option>
 				  									</select>
 				  								</div>
 
 				  								<div class="col-lg-4">
 				  									<label for="salTel">Telephone:</label><br>
-				  									<input type="tel" name="salTel" placeholder="xxx-xxx-xxxx">
+				  									<input type="tel" name="salTel" id="salTel" placeholder="xxx-xxx-xxxx">
 				  								</div>
 				  							</div>
 
 				  							<div class="row">
 				  								<div class="col-lg-4">
 				  									<label for="desNam">Designer:</label><br>
-				  									<select name="desNam">
+				  									<select name="desNam" onchange="desFill()">
 				  										<option value="" selected disabled hidden>Choose Designer</option>
-				  										<option value="des1">Designer 1</option>
-				  										<option value="des2">Designer 2</option>
-				  										<option value="des3">Designer 3</option>
+				  										<option value="des1" id="des1">Tamara Bakken</option>
+				  										<option value="des2" id="des2">Designer 2</option>
+				  										<option value="des3" id="des3">Designer 3</option>
 				  									</select>
 				  								</div>
 
 				  								<div class="col-lg-4">
 				  									<label for="desTel">Telephone:</label><br>
-				  									<input type="tel" name="desTel" placeholder="xxx-xxx-xxxx">
+				  									<input type="tel" name="desTel" id="desTel" placeholder="xxx-xxx-xxxx">
 				  								</div>
 				  							</div>
 				  						</fieldset>
@@ -173,7 +173,7 @@
 				  							<div class="row">
 				  								<div class="col-lg-4">
 				  									<label for="bidDate">Bid Date:</label><br>
-				  									<input type="date" name="bidDate">
+				  									<input type="date" id="bidDate" name="bidDate">
 				  								</div>
 
 				  								<div class="col-lg-4">
@@ -253,7 +253,7 @@
 
 					  						<div class="row">
 					  							<div class="col-lg-1">
-					  								<button type="button" onclick="plaAdd(plants)" class="addButton">+</button>
+					  								<button type="button" onclick="plaAdd()" class="addButton">+</button>
 					  								<button type="button" class="addButton">-</button>
 					  							</div>
 					  						</div>
@@ -1010,7 +1010,7 @@
 
 					 					<div class="row">
 			  								<div class="col-lg-2">
-			  									<button type="button" class="regButton">London Sq. Mall</button>
+			  									<button type="button" onclick="lonBudgFill()" class="regButton">London Sq. Mall</button>
 			  								</div>
 
 			  								<div class="col-lg-2">
@@ -1055,15 +1055,15 @@
 				  								</div>
 
 				  								<div class="col-lg-3">
-				  									<output name="htdDescOut"></output>
+				  									<output id="htdDescOut"></output>
 				  								</div>
 
 				  								<div class="col-lg-2">
-				  									<output name="htdDateOut"></output>
+				  									<output id="htdDateOut"></output>
 				  								</div>
 
 				  								<div class="col-lg-1">
-				  									<output name="htdHoursOut"></output>
+				  									<output id="htdHoursOut"></output>
 				  								</div>
 				  							</div>
 
@@ -1079,15 +1079,105 @@
 				  								</div>
 
 				  								<div class="col-lg-3">
-				  									<output name="ehDescOut"></output>
+				  									<output id="ehDescOut"></output>
 				  								</div>
 
 				  								<div class="col-lg-2">
-				  									<output name="ehDateOut"></output>
+				  									<output id="ehDateOut"></output>
 				  								</div>
 
 				  								<div class="col-lg-1">
-				  									<output name="ehHoursOut"></output>
+				  									<output id="ehHoursOut"></output>
+				  								</div>
+				  							</div>
+
+				  							<div class="row">
+				  								<div class="col-lg-2">
+
+				  								</div>
+
+				  								<div class="col-lg-3">
+				  									<output id="ehDescOut2"></output>
+				  								</div>
+
+				  								<div class="col-lg-2">
+				  									<output id="ehDateOut2"></output>
+				  								</div>
+
+				  								<div class="col-lg-1">
+				  									<output id="ehHoursOut2"></output>
+				  								</div>
+				  							</div>
+
+				  							<div class="row">
+				  								<div class="col-lg-2">
+
+				  								</div>
+
+				  								<div class="col-lg-3">
+				  									<output id="ehDescOut3"></output>
+				  								</div>
+
+				  								<div class="col-lg-2">
+				  									<output id="ehDateOut3"></output>
+				  								</div>
+
+				  								<div class="col-lg-1">
+				  									<output id="ehHoursOut3"></output>
+				  								</div>
+				  							</div>
+
+				  							<div class="row">
+				  								<div class="col-lg-2">
+
+				  								</div>
+
+				  								<div class="col-lg-3">
+				  									<output id="ehDescOut4"></output>
+				  								</div>
+
+				  								<div class="col-lg-2">
+				  									<output id="ehDateOut4"></output>
+				  								</div>
+
+				  								<div class="col-lg-1">
+				  									<output id="ehHoursOut4"></output>
+				  								</div>
+				  							</div>
+
+				  							<div class="row">
+				  								<div class="col-lg-2">
+
+				  								</div>
+
+				  								<div class="col-lg-3">
+				  									<output id="ehDescOut5"></output>
+				  								</div>
+
+				  								<div class="col-lg-2">
+				  									<output id="ehDateOut5"></output>
+				  								</div>
+
+				  								<div class="col-lg-1">
+				  									<output id="ehHoursOut5"></output>
+				  								</div>
+				  							</div>
+
+				  							<div class="row">
+				  								<div class="col-lg-2">
+
+				  								</div>
+
+				  								<div class="col-lg-3">
+				  									<output id="ehDescOut6"></output>
+				  								</div>
+
+				  								<div class="col-lg-2">
+				  									<output id="ehDateOut6"></output>
+				  								</div>
+
+				  								<div class="col-lg-1">
+				  									<output id="ehHoursOut6"></output>
 				  								</div>
 				  							</div>
 
@@ -1103,7 +1193,7 @@
 				  								</div>
 
 				  								<div class="col-lg-1">
-				  									<output name="totHoursOut"></output>
+				  									<output id="totHoursOut"></output>
 				  								</div>
 				  							</div>
 

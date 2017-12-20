@@ -1,8 +1,3 @@
-//Varribles for add methods
-var plaCounter = 1;
-var potCounter = 1;
-var matCounter = 1;
-
 /*Fucntion that removes messages from homescreen
 *Triggerend by clicking x button
 *Takes in i which is a number ref to which message*/
@@ -16,11 +11,92 @@ function hideMsg(i) {
 	but.style.display = 'none';
 }
 
+/*Function that auto fills client information
+*Triggered by selecting a client from the drop down
+*No parameters*/
+function cliFill() {
+	//Checks if first option is selected
+	if(document.getElementById('cli1').selected){
+		//Fills Client infromation for London Sq. Mall
+		document.getElementById('conNam').value = "Amy Benson, Mgr.";
+		document.getElementById('cliAddr').value = "12638 Mall Drive, Scotts Valley, CA 95060";
+		document.getElementById('cliPho').value = "(408) 834-5603";
+	}
+	//Checks if second option is selected
+	else if (document.getElementById('cli2').selected){
+		//Fills Client information for Client 2
+		document.getElementById('conNam').value = "Client 2 Contact";
+		document.getElementById('cliAddr').value = "Client2 St. 2s Valley, CA 22222";
+		document.getElementById('cliPho').value = "(222) 222-2222";
+	}
+	//Fall back case make fields empty
+	else {
+		//Clear Fields
+		document.getElementById('conNam').value = "";
+		document.getElementById('cliAddr').value = "";
+		document.getElementById('cliPho').value = "";
+	}
+}
+
+/*Function tha auto fills sales assoc phone number
+*Triggered by selecting a sales associate
+*no parameters*/
+function saleFill() {
+
+	//Checks if first option is selected
+	if(document.getElementById('sales1').selected){
+		//Set phone number
+		document.getElementById('salTel').value = "(408) 775-3652";
+	}
+	//Checks second option
+	else if(document.getElementById('sales2').selected){
+		//Set phone number
+		document.getElementById('salTel').value = "(202) 202-2222";
+	}
+	//Fall back clears
+	else if(document.getElementById('sales3').selected){
+		//Clear phone number
+		document.getElementById('salTel').value = "(303) 303-3333";
+	}
+}
+
+/*Function tha auto fills designers phone number
+*Triggered by selecting a sdesigner
+*no parameters*/
+function desFill() {
+
+	//Checks if first option is selected
+	if(document.getElementById('des1').selected){
+		//Set phone number
+		document.getElementById('desTel').value = "(408) 775-3645";
+	}
+	//Checks second option
+	else if(document.getElementById('des2').selected){
+		//Set phone number
+		document.getElementById('desTel').value = "(202) 232-2727";
+	}
+	//Checks third option
+	else if(document.getElementById('des3').selected){
+		//Clear phone number
+		document.getElementById('desTel').value = "(303) 323-3737";
+	}
+}
+
+/*Function that displays todays date in the bid date field
+*No trigger
+*No Parameters*/
+function setDate(){
+	//Making a date varrible
+	var date = new Date();
+
+	document.getElementById('bidDate').value = Date();
+}
+
 /*Function that adds a row of inputs in the Material area
 *Triggered by clicking on the + button
 *Takes in divName which is id for the div the fields go in
 *Doesnt Work: Will Most likley use Jquerry instead*/
-function plaAdd(divName) {
+function plaAdd() {
 	var newRow;
 	var newCol;
 	var newEle;
@@ -45,7 +121,7 @@ function plaAdd(divName) {
 	newRow.appendChild(newCol);
 
 	//Putting col into the plants
-	document.getElementById(divName).appendChild(newRow);
+	document.getElementById('plant').appendChild(newRow);
 }
 
 /*Function that fills the view bid for London
@@ -149,4 +225,44 @@ function lonFill() {
 	document.getElementById('labDescOut3').value = "Heavy Equipment Operator";
 	document.getElementById('labUPriOut3').value = "$65.00";
 	document.getElementById('labEPriOut3').value = "650.00";
+}
+
+/*Function that fills a budget for viewing
+*Triggered by sleceting a budget to view
+*No parameters*/
+function lonBudgFill () {
+
+	//Hours to date
+	document.getElementById('htdDescOut').value = "Intial mtg w client";
+	document.getElementById('htdDateOut').value = "April 15";
+	document.getElementById('htdHoursOut').value = "1";
+
+	//Estimated Hours
+	//Row 1
+	document.getElementById('ehDescOut').value = "Prepare prelim sketches";
+	document.getElementById('ehDateOut').value = "April 21";
+	document.getElementById('ehHoursOut').value = "2";
+	//Row 2
+	document.getElementById('ehDescOut2').value = "Prepare design bid";
+	document.getElementById('ehDateOut2').value = "April 21";
+	document.getElementById('ehHoursOut2').value = "2";
+	//Row 3
+	document.getElementById('ehDescOut3').value = "Meet with client";
+	document.getElementById('ehDateOut3').value = "April 25";
+	document.getElementById('ehHoursOut3').value = "1";
+	//Row 4
+	document.getElementById('ehDescOut4').value = "Revise Sketches & Bid";
+	document.getElementById('ehDateOut4').value = "@April 25";
+	document.getElementById('ehHoursOut4').value = "2";
+	//Row 5
+	document.getElementById('ehDescOut5').value = "Meet with client";
+	document.getElementById('ehDateOut5').value = "@May 2";
+	document.getElementById('ehHoursOut5').value = "1";
+	//Row 6
+	document.getElementById('ehDescOut6').value = "Prepare blueprint";
+	document.getElementById('ehDateOut6').value = "@May 3";
+	document.getElementById('ehHoursOut6').value = "3";
+
+	//Total Hours
+	document.getElementById('totHoursOut').value = "12";
 }
