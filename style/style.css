@@ -48,14 +48,13 @@ html, body{
 .nav-item > a{
 	color: #FFF;
 	text-decoration: none;
+	padding: 15px;
 }
-
 
 /*Panel for tabs */
 .tab-content > .tab-pane{
 	background-color: #FFF;
 }
-
 
 /*Div for panel*/
 .FormArea{

@@ -7,12 +7,15 @@
 	font-weight: 700;
 }
 
-.ButtonStyle{
-	padding: 0px 10px 0px 10px;
+.BtnRowStyle{
+	padding: 10px 20px 10px 20px;
 	border-radius: 10%;
 	background-color: #001D14;
 	color: #FFF;
-	font-size: 18px;
-	font-weight: 700;
+	font-size: 24px;
+	font-weight: 800;
 }
 
+.btn-lg{
+	padding: 20px;
+}

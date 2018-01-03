@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>Hello, world!</title>
-    <!-- Required meta tags -->
+    <!--  meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -17,7 +17,6 @@
   	<!-- Body for the website -->
   	<div id="Container">
   		<!--Navigation Menu(On left of screen)-->
-
 		   <div id="Navigation">
 				<ul class="list-unstyled">
 					<li id="jumbotronNav"><a href="#">Admin</a></li>
@@ -33,7 +32,7 @@
 	    	</div>
 
 	    	<!--Tab Navigation Menu-->
-	    <div class="navColor ">
+	    <div class="navColor">
 	    		<!--Navigation Tabs-->
 	    	<ul class="nav nav-tabs">
 	    		<!--Home Tab-->
@@ -77,24 +76,34 @@
 							</div>
 						</div>
 					</div>
-					<!--This is the Tab for Creating a production plan-->
+
+
+		<!--This is the Tab for Creating a production plan-->
+
 		  			<div class="tab-pane" id="CPP" role="tabpanel">
 			  				<div class="FormArea">
 			  					<div class="Container">
-				  					<form name="Create Production Plan">
+				  					<form id="CreateProductionPlan" name="Create Production Plan">
 				  						<fieldset>
 				  							<legend>Create Production Plan</legend>
 				  								<div class="row">
 				  									<div class="col-sm-2">
 						  								<div class="form-group">
-						  									<input class="form-control" type="date" name="date"/><br><br>
+						  									<input class="form-control" type="date" min="2017-11-11" id="ProjectDate" name="ProjectDate"/><br><br>
 						  								</div>
 					  								</div>
 				  								</div>
 
-				  								<!--Project Information Portion-->
+		<!--Project Information Portion-->
 
-				  								<label class="Label">Project Information</label><br>
+				  			<label class="Label">Project Information</label>
+
+				  					<button data-toggle="collapse" data-target="#ProjectInfo"></button>
+
+				  					<br>
+
+		<!-- Project information Div -->
+				  					<div class="collapse show" id="ProjectInfo">
 				  								<div class="row">
 				  									<div class="col-sm-2">
 				  										<div class="form-group">
@@ -103,7 +112,7 @@
 				  									</div>
 				  									<div class="col-sm-3">
 				  										<div class="form-group">
-				  											<input type="text" class="form-control" placeholder="Please insert project title here..."/>
+				  											<input type="text" class="form-control" name="ProjectTitle" placeholder="Please insert project title here..." />
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-1">
@@ -111,7 +120,7 @@
 				  									</div>
 				  									<div class="col-md-4">
 				  										<div class="form-group">
-														  <textarea class="form-control" rows="2" id="Project Site" placeholder="Location of the project..."></textarea>
+														  <textarea class="form-control" rows="2" id="ProjectSite" name="Project_Site" placeholder="Location of the project..." ></textarea>
 														</div>
 				  									</div>
 				  								</div>
@@ -124,7 +133,7 @@
 				  									</div>
 				  									<div class="col-sm-2">
 				  										<div class="form-group">
-				  											<input type="date" class="form-control"/>
+				  											<input type="date" min="2017-11-11" class="form-control" name="Begin_Date" />
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-2 offset-sm-1">
@@ -134,7 +143,7 @@
 				  									</div>
 				  									<div class="col-sm-3">
 				  										<div class="form-group">
-				  											<input type="text" class="form-control" placeholder="Insert bid amount..."/>
+				  											<input type="text" class="form-control" placeholder="Insert bid amount..." name="Bid_Amount"/>
 				  										</div>
 				  									</div>
 				  								</div>
@@ -146,13 +155,23 @@
 				  									</div>
 				  									<div class="col-sm-2">
 				  										<div class="form-group">
-				  											<input type="date" class="form-control"/>
+				  											<input type="date" min="2017-11-11" class="form-control" name="Compl_Date"/>
 				  										</div>
 				  									</div>
 				  								</div>
+				  					</div>
 
-				  								<!--Project Team Portion-->
-				  								<Label class="Label">Project Team</label>
+
+	<!--Project Team Portion-->
+
+				  				<Label class="Label">Project Team</label>
+
+
+				  					<button data-toggle="collapse" data-target="#ProjTeam"></button>
+
+				  					<br>
+
+				  						<div id="ProjTeam" class="collapse show">
 				  								<div class="row">
 				  									<div class="col-sm-2">
 				  										<div class="form-group">
@@ -161,7 +180,7 @@
 				  									</div>
 				  									<div class="col-sm-2">
 				  										<div class="form-group">
-				  											<input type="text" class="form-control" placeholder="Insert name...."/>
+				  											<input type="text" class="form-control" placeholder="Insert name...." name="Sales_Assoc"/>
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-1 offset-sm-1">
@@ -171,7 +190,7 @@
 				  									</div>
 				  									<div class="col-md-4">
 				  										<div class="form-group">
-														  <textarea class="form-control" rows="2" id="Project Site" placeholder="Names for production here..."></textarea>
+														  <textarea class="form-control" rows="2" id="ProjectSite" placeholder="Names for production here..." name="Production"></textarea>
 														</div>
 				  									</div>
 				  								</div>
@@ -183,13 +202,23 @@
 				  									</div>
 				  									<div class="col-sm-2">
 				  										<div class="form-group">
-				  											<textarea type="text" class="form-control" placeholder="Insert names here..."></textarea>
+				  											<textarea class="form-control" placeholder="Insert names here..." name="Designer"></textarea>
 				  										</div>
 				  									</div>
 				  								</div>
+				  						</div>
 
-				  								<!--Material Requirements Portion-->
-				  								<Label class="Label">Material Requirements</Label>
+
+
+	<!--Material Requirements Portion-->
+				  			<Label class="Label">Material Requirements</Label>
+
+				  			<button data-toggle="collapse" data-target="#MaterialReq"></button>
+
+				  			<br>
+
+				  						<div class="collapse show" id="MaterialReq">
+
 				  								<div class="row">
 				  									<div class="col-sm-1 offset-sm-1">
 				  										<div class="form-group">
@@ -227,36 +256,48 @@
 				  										</div>
 				  									</div>
 				  								</div>
-				  								<div class="row">
-				  									<div class="col-sm-1">
-				  										<label>Plants:</label>
-				  									</div>
-				  								</div>
+
+
+<!-- 		Plants Collapse & plants row -->
+  								<div class="row">
+  									<div class="col-sm-1">
+  										<label>Plants:</label>
+  									</div>
+
+  									<button data-toggle="collapse" data-target="#Plants_Collapse"></button>
+  								</div>
+
+
+  								<div class="collapse show" id="Plants_Collapse">
+
+				  							<!-- Wrapper -->
+				  							<div id="Plants">
 				  								<!--Rows Plants-->
-				  								<div class="row">
+				  								<div class="row plants_Production">
+				  									<!-- columns plants -->
 				  									<div class="col-sm-1 offset-sm-1">
 				  										<div class="form-group">
+				  											<input type="number" class="form-control">
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-1">
+				  										<div class="form-group ">
 				  											<input type="text" class="form-control">
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-1">
 				  										<div class="form-group">
+				  											<input type="number" class="form-control">
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-1">
+				  										<div class="form-group ">
 				  											<input type="text" class="form-control">
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-1">
 				  										<div class="form-group">
-				  											<input type="text" class="form-control">
-				  										</div>
-				  									</div>
-				  									<div class="col-sm-1">
-				  										<div class="form-group">
-				  											<input type="text" class="form-control">
-				  										</div>
-				  									</div>
-				  									<div class="col-sm-1">
-				  										<div class="form-group">
-				  											<input type="text" class="form-control">
+				  											<input type="number" class="form-control">
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-2">
@@ -266,26 +307,30 @@
 				  									</div>
 				  									<div class="col-sm-2">
 				  										<div class="form-group">
-				  											<input type="date" class="form-control">
+				  											<input type="date" min="2017-11-11" class="form-control">
 				  										</div>
 				  									</div>
 				  								</div>
+				  							</div>
 
-				  								<div class="input_fields_wrap">
-				  									
+				  							<!-- added fields div -->
+				  								<div id="Plants_columns">
+				  									<div class="input_fields_plants_wrap">
+
+				  									</div>
 				  								</div>
-
+				  				</div>
 
 				  								<!--Add field Button-->
 				  								<div class="row">
 				  									<div class="col- offset-sm-9">
 				  										<div class="form-group">
-				  											<button type="button" name="Add Field" class="add_field_button ButtonStyle">+</button>
+				  											<button type="button" name="Add Field" class="add_field_plants_button BtnRowStyle">+</button>
 				  										</div>
 				  									</div>
 				  									<div class="col-">
 				  										<div class="form-group">
-				  											<button type="button" name="Remove Field" class="remove_field ButtonStyle">-</button>
+				  											<button type="button" name="Remove Field" class="remove_field_plants BtnRowStyle">-</button>
 				  										</div>
 				  									</div>
 				  								</div>
@@ -294,35 +339,43 @@
 
 
 				  								<!-- Rows Pottery -->
-				  								<div class="row">
-				  									<div class="col-sm-1">
-				  										<label>Pottery:</label>
-				  									</div>
-				  								</div>
-				  								<div class="row">
+  								<div class="row">
+  									<div class="col-sm-1">
+  										<label>Pottery:</label>
+  									</div>
+
+  									<button data-toggle="collapse" data-target="#Pottery_Collapse"></button>
+  								</div>
+
+
+  								<div class="collapse show" id="Pottery_Collapse">
+
+				  							<!-- 	inputs for pottery -->
+				  							<div id="Pottery">
+				  								<div class="row pottery_Production">
 				  									<div class="col-sm-1 offset-sm-1">
 				  										<div class="form-group">
+				  											<input type="number" class="form-control">
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-1">
+				  										<div class="form-group ">
 				  											<input type="text" class="form-control">
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-1">
 				  										<div class="form-group">
+				  											<input type="number" class="form-control">
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-1">
+				  										<div class="form-group ">
 				  											<input type="text" class="form-control">
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-1">
 				  										<div class="form-group">
-				  											<input type="text" class="form-control">
-				  										</div>
-				  									</div>
-				  									<div class="col-sm-1">
-				  										<div class="form-group">
-				  											<input type="text" class="form-control">
-				  										</div>
-				  									</div>
-				  									<div class="col-sm-1">
-				  										<div class="form-group">
-				  											<input type="text" class="form-control">
+				  											<input type="number" class="form-control">
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-2">
@@ -332,58 +385,76 @@
 				  									</div>
 				  									<div class="col-sm-2">
 				  										<div class="form-group">
-				  											<input type="date" class="form-control">
+				  											<input type="date" min="2017-11-11" class="form-control">
 				  										</div>
 				  									</div>
 				  								</div>
+				  							</div>
+
+				  					<!-- Add field pottery div -->
+				  							<div id="Pottery_Columns">
+				  								<div class="input_fields_pottery_wrap">
+				  									
+				  								</div>
+				  							</div>
+
+				  				</div>
 
 
 				  								<!--Add/Remove field Button-->
 				  								<div class="row">
 				  									<div class="col- offset-sm-9">
 				  										<div class="form-group">
-				  											<button type="button" name="Add Field" class="add_field_button ButtonStyle">+</button>
+				  											<button type="button" name="Add Field" class="add_field_pottery_button BtnRowStyle">+</button>
 				  										</div>
 				  									</div>
 				  									<div class="col-">
 				  										<div class="form-group">
-				  											<button type="button" name="Remove Field" class="remove_field ButtonStyle">-</button>
+				  											<button type="button" name="Remove Field" class="remove_field_pottery BtnRowStyle">-</button>
 				  										</div>
 				  									</div>
 				  								</div>
 
 
 
-				  								<!-- Rows Materials -->
-				  								<div class="row">
-				  									<div class="col-sm-1">
-				  										<label>Materials:</label>
-				  									</div>
-				  								</div>
-				  								<div class="row">
+								<!-- Rows Materials -->
+								<div class="row">
+									<div class="col-sm-1">
+										<label>Materials:</label>
+									</div>
+
+									<button data-toggle="collapse" data-target="#Materials_Collapse"></button>
+								</div>
+
+
+								<div class="collapse show" id="Materials_Collapse">
+
+
+				  							<div id="Materials">
+				  								<div class="row materials_Production">
 				  									<div class="col-sm-1 offset-sm-1">
 				  										<div class="form-group">
+				  											<input type="number" class="form-control">
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-1">
+				  										<div class="form-group ">
 				  											<input type="text" class="form-control">
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-1">
 				  										<div class="form-group">
+				  											<input type="number" class="form-control">
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-1">
+				  										<div class="form-group ">
 				  											<input type="text" class="form-control">
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-1">
 				  										<div class="form-group">
-				  											<input type="text" class="form-control">
-				  										</div>
-				  									</div>
-				  									<div class="col-sm-1">
-				  										<div class="form-group">
-				  											<input type="text" class="form-control">
-				  										</div>
-				  									</div>
-				  									<div class="col-sm-1">
-				  										<div class="form-group">
-				  											<input type="text" class="form-control">
+				  											<input type="number" class="form-control">
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-2">
@@ -393,57 +464,73 @@
 				  									</div>
 				  									<div class="col-sm-2">
 				  										<div class="form-group">
-				  											<input type="date" class="form-control">
+				  											<input type="date" min="2017-11-11" class="form-control">
 				  										</div>
 				  									</div>
 				  								</div>
+				  							</div>
+
+				  							<div id="Materials_Columns">
+				  								<div class="input_fields_materials_wrap">
+
+				  								</div>
+				  								
+				  							</div>
+				  				</div>
 
 
 				  								<!--Add field Button-->
 				  								<div class="row">
 				  									<div class="col- offset-sm-9">
 				  										<div class="form-group">
-				  											<button type="button" name="Add Field" class="add_field_button ButtonStyle">+</button>
+				  											<button type="button" name="Add Field" class="add_field_materials_button BtnRowStyle">+</button>
 				  										</div>
 				  									</div>
 				  									<div class="col-">
 				  										<div class="form-group">
-				  											<button type="button" name="Remove Field" class="remove_field ButtonStyle">-</button>
+				  											<button type="button" name="Remove Field" class="remove_field_materials BtnRowStyle">-</button>
 				  										</div>
 				  									</div>
 				  								</div>
 
 
-				  								<!-- Rows Tools -->
-				  								<div class="row">
-				  									<div class="col-sm-1">
-				  										<label>Tools:</label>
-				  									</div>
-				  								</div>
-				  								<div class="row">
+  								<!-- Rows Tools -->
+  								<div class="row">
+  									<div class="col-sm-1">
+  										<label>Tools:</label>
+  									</div>
+
+  									<button data-toggle="collapse" data-target="#Tools_Collapse"></button>
+  								</div>
+
+
+  								<div class="collapse show" id="Tools_Collapse">
+
+				  							<div id="Tools">
+				  								<div class="row tools_Production">
 				  									<div class="col-sm-1 offset-sm-1">
 				  										<div class="form-group">
+				  											<input type="number" class="form-control">
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-1">
+				  										<div class="form-group ">
 				  											<input type="text" class="form-control">
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-1">
 				  										<div class="form-group">
+				  											<input type="number" class="form-control">
+				  										</div>
+				  									</div>
+				  									<div class="col-sm-1">
+				  										<div class="form-group ">
 				  											<input type="text" class="form-control">
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-1">
 				  										<div class="form-group">
-				  											<input type="text" class="form-control">
-				  										</div>
-				  									</div>
-				  									<div class="col-sm-1">
-				  										<div class="form-group">
-				  											<input type="text" class="form-control">
-				  										</div>
-				  									</div>
-				  									<div class="col-sm-1">
-				  										<div class="form-group">
-				  											<input type="text" class="form-control">
+				  											<input type="number" class="form-control">
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-2">
@@ -453,30 +540,43 @@
 				  									</div>
 				  									<div class="col-sm-2">
 				  										<div class="form-group">
-				  											<input type="date" class="form-control">
+				  											<input type="date" min="2017-11-11" class="form-control">
 				  										</div>
 				  									</div>
 				  								</div>
+				  							</div>
+
+				  							<div id="Tools_Columns">
+				  								<div class="input_fields_tools_wrap">
+				  								</div>
+				  							</div>
+				  					</div>
 
 
 				  								<!--Add field Button-->
 				  								<div class="row">
 				  									<div class="col- offset-sm-9">
 				  										<div class="form-group">
-				  											<button type="button" name="Add Field" class="add_field_button ButtonStyle">+</button>
+				  											<button type="button" name="Add Field" class="add_field_tools_button BtnRowStyle">+</button>
 				  										</div>
 				  									</div>
 				  									<div class="col-">
 				  										<div class="form-group">
-				  											<button type="button" name="Remove Field" class="remove_field ButtonStyle">-</button>
+				  											<button type="button" name="Remove Field" class="remove_field_tools BtnRowStyle">-</button>
 				  										</div>
 				  									</div>
 				  								</div>
 
+				  						</div>
 
 
-				  								<!-- Labour Requirements Section -->
-				  								<label class="Label">Labor Requirement</label>
+
+		  								<!-- Labour Requirements Section -->
+		  								<label class="Label">Labor Requirement</label>
+
+											<button data-toggle="collapse" data-target="#Labor_Collapse"></button>
+
+											<div id="Labor_Collapse" class="collapse show">
 				  								<div class="row">
 				  									<div class="col-sm-3">
 				  										<div class="form-group">
@@ -509,8 +609,12 @@
 				  										</div>
 				  									</div>
 				  								</div>
+
+
+
+				  							<div id="labor">
 				  								<!--Inputs for labor-->
-				  								<div class="row">
+				  								<div class="row labor_Production">
 				  									<div class="col-sm-3">
 				  										<div class="form-group">
 				  											<input type="text" class="form-control">
@@ -542,21 +646,28 @@
 				  										</div>
 				  									</div>
 				  								</div>
+				  							</div>
 
+				  						<div id="labor_Columns">
+				  							<div class="input_fields_labor_wrap">
+				  							</div>
+				  						</div>
 
 				  								<!--Add field Button-->
 				  								<div class="row">
 				  									<div class="col- offset-sm-9">
 				  										<div class="form-group">
-				  											<button type="button" name="Add Field" class="add_field_button ButtonStyle">+</button>
+				  											<button type="button" name="Add Field" class="add_field_labor_button BtnRowStyle">+</button>
 				  										</div>
 				  									</div>
 				  									<div class="col-">
 				  										<div class="form-group">
-				  											<button type="button" name="Remove Field" class="remove_field ButtonStyle">-</button>
+				  											<button type="button" name="Remove Field" class="remove_field_labor BtnRowStyle">-</button>
 				  										</div>
 				  									</div>
 				  								</div>
+
+				  					</div>
 
 				  								<br><br>
 
@@ -668,8 +779,8 @@
 						  								</div>
 				  								</div>
 
-				  							<button type="submit" class="btn-lg btn-success" id="btnSubmit">Submit</button>
-				  							<button type="button" class="btn-lg btn-warning" id="btnReset">Reset Fields</button>
+				  							<button type="submit" class="btn-lg btn-success" id="btnSubmit_CPP">Submit</button>
+				  							<button type="reset" class="btn-lg btn-warning" id="btnReset">Reset Fields</button>
 
 
 				  						</fieldset>
@@ -679,7 +790,12 @@
 			  				</div>
 		  			</div>
 
-		  			<!--This is the tab to view the production plans-->
+
+
+
+
+
+<!--This is the tab to view the production plans-->
 		  			<div class="tab-pane" id="VPP" role="tabpanel">
 			  				<div class="FormArea">
 			  					<div class="Container">
@@ -689,7 +805,7 @@
 				  								<div class="row">
 				  									<div class="col-sm-2">
 						  								<div class="form-group">
-						  									<output class="form-control" type="date" name="date"/></output><br><br>
+						  									<output class="form-control" name="date"></output><br><br>
 						  								</div>
 					  								</div>
 				  								</div>
@@ -705,7 +821,7 @@
 				  									</div>
 				  									<div class="col-sm-3">
 				  										<div class="form-group">
-				  											<output type="text" class="form-control" placeholder="Please insert project title here..."/></output>
+				  											<output class="form-control" ></output>
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-1">
@@ -713,7 +829,7 @@
 				  									</div>
 				  									<div class="col-md-4">
 				  										<div class="form-group">
-														  <output class="form-control" rows="2" id="Project Site" placeholder="Location of the project..."></output>
+														  <output class="form-control" rows="2" id="ProjectSite"></output>
 														</div>
 				  									</div>
 				  								</div>
@@ -726,7 +842,7 @@
 				  									</div>
 				  									<div class="col-sm-2">
 				  										<div class="form-group">
-				  											<output type="date" class="form-control"/></output>
+				  											<output class="form-control"></output>
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-2 offset-sm-1">
@@ -736,7 +852,7 @@
 				  									</div>
 				  									<div class="col-sm-3">
 				  										<div class="form-group">
-				  											<output type="text" class="form-control" placeholder="Insert bid amount..."/></output>
+				  											<output class="form-control"/></output>
 				  										</div>
 				  									</div>
 				  								</div>
@@ -748,7 +864,7 @@
 				  									</div>
 				  									<div class="col-sm-2">
 				  										<div class="form-group">
-				  											<output type="date" class="form-control"/></output>
+				  											<output class="form-control"/></output>
 				  										</div>
 				  									</div>
 				  								</div>
@@ -763,7 +879,7 @@
 				  									</div>
 				  									<div class="col-sm-2">
 				  										<div class="form-group">
-				  											<output type="text" class="form-control" placeholder="Insert name...."/></output>
+				  											<output class="form-control" /></output>
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-1 offset-sm-1">
@@ -773,7 +889,7 @@
 				  									</div>
 				  									<div class="col-md-4">
 				  										<div class="form-group">
-														  <output class="form-control" rows="2" id="Project Site" placeholder="Names for production here..."></output>
+														  <output class="form-control" rows="2" id="Project Site" ></output>
 														</div>
 				  									</div>
 				  								</div>
@@ -785,7 +901,7 @@
 				  									</div>
 				  									<div class="col-sm-2">
 				  										<div class="form-group">
-				  											<output type="text" class="form-control" placeholder="Insert names here..."></output>
+				  											<output class="form-control" ></output>
 				  										</div>
 				  									</div>
 				  								</div>
@@ -829,46 +945,51 @@
 				  										</div>
 				  									</div>
 				  								</div>
+
+
+
 				  								<div class="row">
 				  									<div class="col-sm-1">
 				  										<label>Plants:</label>
 				  									</div>
+
+
 				  								</div>
 				  								<!--Rows Plants-->
 				  								<div class="row">
 				  									<div class="col-sm-1 offset-sm-1">
 				  										<div class="form-group">
-				  											<output type="text" class="form-control"></output>
+				  											<output class="form-control"></output>
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-1">
 				  										<div class="form-group">
-				  											<output type="text" class="form-control"></output>
+				  											<output class="form-control"></output>
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-1">
 				  										<div class="form-group">
-				  											<output type="text" class="form-control"></output>
+				  											<output class="form-control"></output>
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-1">
 				  										<div class="form-group">
-				  											<output type="text" class="form-control"></output>
+				  											<output class="form-control"></output>
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-1">
 				  										<div class="form-group">
-				  											<output type="text" class="form-control"></output>
+				  											<output class="form-control"></output>
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-2">
 				  										<div class="form-group">
-				  											<output type="datetime-local" class="form-control"></output>
+				  											<output class="form-control"></output>
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-2">
 				  										<div class="form-group">
-				  											<output type="date" class="form-control"></output>
+				  											<output class="form-control"></output>
 				  										</div>
 				  									</div>
 				  								</div>
@@ -881,37 +1002,37 @@
 				  								<div class="row">
 				  									<div class="col-sm-1 offset-sm-1">
 				  										<div class="form-group">
-				  											<output type="text" class="form-control"></output>
+				  											<output class="form-control"></output>
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-1">
 				  										<div class="form-group">
-				  											<output type="text" class="form-control"></output>
+				  											<output class="form-control"></output>
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-1">
 				  										<div class="form-group">
-				  											<output type="text" class="form-control"></output>
+				  											<output class="form-control"></output>
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-1">
 				  										<div class="form-group">
-				  											<output type="text" class="form-control"></output>
+				  											<output class="form-control"></output>
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-1">
 				  										<div class="form-group">
-				  											<output type="text" class="form-control"></output>
+				  											<output class="form-control"></output>
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-2">
 				  										<div class="form-group">
-				  											<output type="datetime-local" class="form-control"></output>
+				  											<output class="form-control"></output>
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-2">
 				  										<div class="form-group">
-				  											<output type="date" class="form-control"></output>
+				  											<output class="form-control"></output>
 				  										</div>
 				  									</div>
 				  								</div>
@@ -924,37 +1045,37 @@
 				  								<div class="row">
 				  									<div class="col-sm-1 offset-sm-1">
 				  										<div class="form-group">
-				  											<output type="text" class="form-control"></output>
+				  											<output class="form-control"></output>
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-1">
 				  										<div class="form-group">
-				  											<output type="text" class="form-control"></output>
+				  											<output class="form-control"></output>
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-1">
 				  										<div class="form-group">
-				  											<output type="text" class="form-control"></output>
+				  											<output class="form-control"></output>
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-1">
 				  										<div class="form-group">
-				  											<output type="text" class="form-control"></output>
+				  											<output class="form-control"></output>
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-1">
 				  										<div class="form-group">
-				  											<output type="text" class="form-control"></output>
+				  											<output class="form-control"></output>
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-2">
 				  										<div class="form-group">
-				  											<output type="datetime-local" class="form-control"></output>
+				  											<output class="form-control"></output>
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-2">
 				  										<div class="form-group">
-				  											<output type="date" class="form-control"></output>
+				  											<output class="form-control"></output>
 				  										</div>
 				  									</div>
 				  								</div>
@@ -967,37 +1088,37 @@
 				  								<div class="row">
 				  									<div class="col-sm-1 offset-sm-1">
 				  										<div class="form-group">
-				  											<output type="text" class="form-control"></output>
+				  											<output class="form-control"></output>
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-1">
 				  										<div class="form-group">
-				  											<output type="text" class="form-control"></output>
+				  											<output class="form-control"></output>
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-1">
 				  										<div class="form-group">
-				  											<output type="text" class="form-control"></output>
+				  											<output class="form-control"></output>
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-1">
 				  										<div class="form-group">
-				  											<output type="text" class="form-control"></output>
+				  											<output class="form-control"></output>
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-1">
 				  										<div class="form-group">
-				  											<output type="text" class="form-control"></output>
+				  											<output class="form-control"></output>
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-2">
 				  										<div class="form-group">
-				  											<output type="datetime-local" class="form-control"></output>
+				  											<output class="form-control"></output>
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-2">
 				  										<div class="form-group">
-				  											<output type="date" class="form-control"></output>
+				  											<output class="form-control"></output>
 				  										</div>
 				  									</div>
 				  								</div>
@@ -1036,36 +1157,37 @@
 				  										</div>
 				  									</div>
 				  								</div>
-				  								<!--outputs for labor-->
+
+				  								<!--inputs for labor-->
 				  								<div class="row">
 				  									<div class="col-sm-3">
 				  										<div class="form-group">
-				  											<output type="text" class="form-control"></output>
+				  											<output class="form-control"></output>
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-1">
 				  										<div class="form-group">
-				  											<output type="text" class="form-control"></output>
+				  											<output class="form-control"></output>
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-1">
 				  										<div class="form-group">
-				  											<output type="text" class="form-control"></output>
+				  											<output class="form-control"></output>
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-1">
 				  										<div class="form-group">
-				  											<output type="text" class="form-control"></output>
+				  											<output class="form-control"></output>
 				  										</div>
 				  									</div>
 				  									<div class="col-xs-2">
 				  										<div class="form-group">
-				  											<output type="time" class="form-control"></output>
+				  											<output class="form-control"></output>
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-3">
 				  										<div class="form-group">
-				  											<output type="text" class="form-control"></output>
+				  											<output class="form-control"></output>
 				  										</div>
 				  									</div>
 				  								</div><br><br>
@@ -1078,12 +1200,12 @@
 					  								</div>
 					  								<div class="col-sm-1">
 					  									<div class="form-group">
-					  										<output type="text" class="form-control"/></output>
+					  										<output class="form-control"/></output>
 					  									</div>
 					  								</div>
 					  								<div class="col-sm-2">
 					  									<div class="form-group">
-					  										<output type="text" class="form-control"/></output>
+					  										<output class="form-control"/></output>
 					  									</div>
 					  								</div>
 				  								</div>
@@ -1095,12 +1217,12 @@
 						  							</div>
 						  								<div class="col-sm-1">
 						  									<div class="form-group">
-						  										<output type="text" class="form-control"/></output>
+						  										<output class="form-control"/></output>
 						  									</div>
 						  								</div>
 						  								<div class="col-sm-2">
 						  									<div class="form-group">
-						  										<output type="text" class="form-control"/></output>
+						  										<output class="form-control"/></output>
 						  									</div>
 						  								</div>
 					  							</div>
@@ -1112,12 +1234,12 @@
 						  							</div>
 						  								<div class="col-sm-1">
 						  									<div class="form-group">
-						  										<output type="text" class="form-control"/></output>
+						  										<output class="form-control"/></output>
 						  									</div>
 						  								</div>
 						  								<div class="col-sm-2">
 						  									<div class="form-group">
-						  										<output type="text" class="form-control"/></output>
+						  										<output class="form-control"/></output>
 						  									</div>
 						  								</div>
 				  								</div>
@@ -1129,12 +1251,12 @@
 					  								</div>
 					  								<div class="col-sm-1">
 					  									<div class="form-group">
-					  										<output type="text" class="form-control"/></output>
+					  										<output class="form-control"/></output>
 					  									</div>
 					  								</div>
 						  								<div class="col-sm-2">
 						  									<div class="form-group">
-						  										<output type="text" class="form-control"/></output>
+						  										<output class="form-control"/></output>
 						  									</div>
 						  								</div>
 				  								</div>
@@ -1146,12 +1268,12 @@
 					  								</div>
 					  								<div class="col-sm-1">
 					  									<div class="form-group">
-					  										<output type="text" class="form-control"/></output>
+					  										<output class="form-control"/></output>
 					  									</div>
 					  								</div>
 						  								<div class="col-sm-2">
 						  									<div class="form-group">
-						  										<output type="text" class="form-control"/></output>
+						  										<output class="form-control"/></output>
 						  									</div>
 						  								</div>
 				  								</div>
@@ -1163,17 +1285,17 @@
 					  								</div>
 					  								<div class="col-sm-1">
 					  									<div class="form-group">
-					  										<output type="text" class="form-control"/></output>
+					  										<output class="form-control"/></output>
 					  									</div>
 					  								</div>
 						  								<div class="col-sm-2">
 						  									<div class="form-group">
-						  										<output type="text" class="form-control"/></output>
+						  										<output class="form-control"/></output>
 						  									</div>
 						  								</div>
 						  								<div class="col-sm-2">
 						  									<div class="form-group">
-						  										<label>(%<output type="text" class="form-control"/></output>percent of the bid.)</label>
+						  										<label>(%<output class="form-control"/></output>percent of the bid.)</label>
 						  									</div>
 						  								</div>
 				  								</div>
@@ -1183,7 +1305,11 @@
 			  					</div>
 			  				</div>
 		  			</div>
-		  			<!--This is the create work report tab-->
+
+
+
+
+<!--This is the create work report tab-->
 		 			 <div class="tab-pane" id="CWR" role="tabpanel">
 		 			 	<div class="FormArea">
 					 		<div class="Container">
@@ -1210,11 +1336,13 @@
 									 			</div>
 									 			<div class="col-sm-2">
 									 				<div class="form-group">
-									 					<input type="text" class="form-control"/>
+									 					<input type="text" class="form-control" placeholder="Add a Project name..."/>
 									 				</div>
 									 			</div>
 								 			</div>
-								 			<!--Material Used Section-->
+
+
+		<!--Material Used Section-->
 
 								 			<label class="Label">Materials Used:</label>
 				  								<div class="row">
@@ -1245,7 +1373,8 @@
 				  									</div>
 				  								</div>
 
-									 			<div class="row">
+				  							<div id="Materials_Used">
+									 			<div class="row Materials_Used_Production">
 				  									<div class="col-sm-1 offset-sm-1">
 				  										<div class="form-group">
 				  											<input type="text" class="form-control"/>
@@ -1253,17 +1382,17 @@
 				  									</div>
 				  									<div class="col-sm-1">
 				  										<div class="form-group">
-				  											<input type="text" class="form-control"/>
+				  											<input type="number" class="form-control"/>
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-1">
 				  										<div class="form-group">
-				  											<input type="text" class="form-control"/>
+				  											<input type="number" class="form-control"/>
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-1">
 				  										<div class="form-group">
-				  											<input type="text" class="form-control"/>
+				  											<input type="number" class="form-control"/>
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-2">
@@ -1272,6 +1401,30 @@
 				  										</div>
 				  									</div>
 									 			</div>
+									 		</div>
+
+
+
+									 		<div id="Materials_Used_Columns">
+									 			<div class="input_fields_Materials_Used_wrap">
+									 				
+									 			</div>
+									 		</div>
+
+				<!--Add field Button-->
+				  								<div class="row">
+				  									<div class="col- offset-sm-9">
+				  										<div class="form-group">
+				  											<button type="button" name="Add Field" class="add_field_Materials_Used_button BtnRowStyle">+</button>
+				  										</div>
+				  									</div>
+				  									<div class="col-">
+				  										<div class="form-group">
+				  											<button type="button" name="Remove Field" class="remove_field_Materials_Used BtnRowStyle">-</button>
+				  										</div>
+				  									</div>
+				  								</div>
+
 
 									 			<br>
 
@@ -1280,7 +1433,7 @@
 									 					<label>Total cost of materials:</label>
 									 				</div>
 									 				<div class="col-sm-1 offset-sm-1">
-									 					<input type="text" class="form-control"/>
+									 					<input type="number" class="form-control"/>
 									 				</div>
 									 			</div>
 
@@ -1316,7 +1469,9 @@
 				  									</div>
 				  								</div>
 
-									 			<div class="row">
+
+				  							<div id="LaborCWR">
+									 			<div class="row LaborCWR_Production">
 				  									<div class="col-sm-1 offset-sm-1">
 				  										<div class="form-group">
 				  											<input type="text" class="form-control"/>
@@ -1324,17 +1479,17 @@
 				  									</div>
 				  									<div class="col-sm-1">
 				  										<div class="form-group">
-				  											<input type="text" class="form-control"/>
+				  											<input type="number" class="form-control"/>
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-1">
 				  										<div class="form-group">
-				  											<input type="text" class="form-control"/>
+				  											<input type="number" class="form-control"/>
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-1">
 				  										<div class="form-group">
-				  											<input type="text" class="form-control"/>
+				  											<input type="number" class="form-control"/>
 				  										</div>
 				  									</div>
 				  									<div class="col-sm-2">
@@ -1343,6 +1498,30 @@
 				  										</div>
 				  									</div>
 									 			</div>
+									 		</div>
+
+									 		<div id="LaborCWR_Columns">
+									 			<div class="input_fields_LaborCWR_wrap">
+									 				
+									 			</div>
+									 		</div>
+
+
+				<!--Add field Button-->
+				  								<div class="row">
+				  									<div class="col- offset-sm-9">
+				  										<div class="form-group">
+				  											<button type="button" name="Add Field" class="add_field_LaborCWR_button BtnRowStyle">+</button>
+				  										</div>
+				  									</div>
+				  									<div class="col-">
+				  										<div class="form-group">
+				  											<button type="button" name="Remove Field" class="remove_field_LaborCWR BtnRowStyle">-</button>
+				  										</div>
+				  									</div>
+				  								</div>
+
+
 
 									 			<br>
 
@@ -1351,7 +1530,7 @@
 									 					<label>Total cost of Labor:</label>
 									 				</div>
 									 				<div class="col-sm-1 offset-sm-1">
-									 					<input type="text" class="form-control"/>
+									 					<input type="number" class="form-control"/>
 									 				</div>
 									 			</div>
 
@@ -1391,6 +1570,9 @@
 					 	</div>
 		 			</div>
 
+
+
+<!--View Work Report TabPanel -->
 					<div class="tab-pane" id="VWR" role="tabpanel">
 							 			 	<div class="FormArea">
 										 		<div class="Container">
@@ -1593,13 +1775,15 @@
 								</div>
 						    </div>
 
-							<div class="tab-pane active" id="VDB" role="tabpanel">
-								<div class="FormArea">
-									<div class="Container">
 
-									</div>
-								</div>
+
+					<div class="tab-pane active" id="VDB" role="tabpanel">
+						<div class="FormArea">
+							<div class="Container">
+
 							</div>
+						</div>
+					</div>
 
 
 
@@ -1612,8 +1796,13 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <!-- Validation Javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.js"></script>
+    <!-- My javascript -->
     <script src="js/script.js"></script>
     <script src="js/script_jovan.js"></script>
+    <script src="js/validationProduction.js"></script>
 	</div>
   </body>
 </html>
